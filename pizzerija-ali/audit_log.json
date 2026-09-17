@@ -1,7 +1,7 @@
 {
   "project_id": "PRJ-E2E-03",
-  "start_time": "2026-09-17T21:01:41.006790+00:00",
-  "exported_at": "2026-09-17T21:01:47.694796+00:00",
+  "start_time": "2026-09-17T21:03:32.024026+00:00",
+  "exported_at": "2026-09-17T21:03:34.180090+00:00",
   "tasks_count": 2,
   "tasks": [
     {
@@ -13,8 +13,8 @@
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{\"brief\": {\"client_name\": \"Pizzerija Ali\", \"business_type\": \"Restavracija\", \"requirements\": [\"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"info@pizzerija-alibaba.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T21:01:41.047413+00:00",
-      "updated_at": "2026-09-17T21:01:41.072610+00:00"
+      "created_at": "2026-09-17T21:03:32.062325+00:00",
+      "updated_at": "2026-09-17T21:03:32.078992+00:00"
     },
     {
       "task_id": "TASK-QA-PRJ-E2E-03-C1",
@@ -25,33 +25,33 @@
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T21:01:41.082131+00:00",
-      "updated_at": "2026-09-17T21:01:41.099809+00:00"
+      "created_at": "2026-09-17T21:03:32.087588+00:00",
+      "updated_at": "2026-09-17T21:03:32.106503+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-3EB89838",
+      "run_id": "RUN-5C6BBE3B",
       "task_id": "TASK-BUILD-PRJ-E2E-03",
       "status": "SUCCESS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Pizzerija Ali\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
       "evidence_json": "[\"Created index.html (10242 bytes)\", \"Created styles.css (12137 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
       "decisions_json": "[\"Selected tailored color palette and messaging for Restavracija\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
       "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:01:41.055478+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:01:41.055536+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali\"}}, {\"timestamp\": \"2026-09-17T21:01:41.069611+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Pizzerija Ali\", \"archetype\": \"EditorialLuxury\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Pizzerija Ali' v arhetipu EditorialLuxury s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Pizzerija Ali' (Restavracija). Pregledujem izku\\u0161nje preteklih 195 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Pizzerija Ali' predlagam strate\\u0161ko pozicioniranje: Vrhunsko kulinari\\u010dno do\\u017eivetje s pristnimi doma\\u010dimi sestavinami in toplo postre\\u017ebo.. Izbran arhetip: EditorialLuxury.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Warm Obsidian & Champagne Gold' s hero fotografijo, postavitvijo ImmersiveHero in tipografijo 'Playfair Display', Georgia, serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Pizzerija Ali' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:01:41.069681+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Pizzerija Ali\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Pizzerija Ali' (Restavracija). Pregledujem izku\\u0161nje preteklih 195 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Pizzerija Ali' predlagam strate\\u0161ko pozicioniranje: Vrhunsko kulinari\\u010dno do\\u017eivetje s pristnimi doma\\u010dimi sestavinami in toplo postre\\u017ebo.. Izbran arhetip: EditorialLuxury.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Warm Obsidian & Champagne Gold' s hero fotografijo, postavitvijo ImmersiveHero in tipografijo 'Playfair Display', Georgia, serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Pizzerija Ali' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:01:41.072463+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:01:41.072578+00:00\", \"run_id\": \"RUN-3EB89838\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-17T21:01:41.072610+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:32.070514+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:32.070561+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali\"}}, {\"timestamp\": \"2026-09-17T21:03:32.077462+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Pizzerija Ali\", \"archetype\": \"EditorialLuxury\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Pizzerija Ali' v arhetipu EditorialLuxury s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Pizzerija Ali' (Restavracija). Pregledujem izku\\u0161nje preteklih 223 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Pizzerija Ali' predlagam strate\\u0161ko pozicioniranje: Vrhunsko kulinari\\u010dno do\\u017eivetje s pristnimi doma\\u010dimi sestavinami in toplo postre\\u017ebo.. Izbran arhetip: EditorialLuxury.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Warm Obsidian & Champagne Gold' s hero fotografijo, postavitvijo ImmersiveHero in tipografijo 'Playfair Display', Georgia, serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Pizzerija Ali' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:32.077504+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Pizzerija Ali\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Pizzerija Ali' (Restavracija). Pregledujem izku\\u0161nje preteklih 223 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Pizzerija Ali' predlagam strate\\u0161ko pozicioniranje: Vrhunsko kulinari\\u010dno do\\u017eivetje s pristnimi doma\\u010dimi sestavinami in toplo postre\\u017ebo.. Izbran arhetip: EditorialLuxury.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Warm Obsidian & Champagne Gold' s hero fotografijo, postavitvijo ImmersiveHero in tipografijo 'Playfair Display', Georgia, serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Pizzerija Ali' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:32.078931+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:03:32.078981+00:00\", \"run_id\": \"RUN-5C6BBE3B\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-17T21:03:32.078992+00:00"
     },
     {
-      "run_id": "RUN-4E40882E",
+      "run_id": "RUN-53CC880D",
       "task_id": "TASK-QA-PRJ-E2E-03-C1",
       "status": "PASS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\index.html\", \"type\": \"html_verified\"}]",
       "evidence_json": "[\"VERIFIED: index.html exists (10242 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:01:41.090152+00:00\", \"run_id\": \"RUN-4E40882E\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Run deterministic QA checks for Pizzerija Ali\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:01:41.090181+00:00\", \"run_id\": \"RUN-4E40882E\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"project_id\": \"PRJ-E2E-03\"}}, {\"timestamp\": \"2026-09-17T21:01:41.099734+00:00\", \"run_id\": \"RUN-4E40882E\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:01:41.099786+00:00\", \"run_id\": \"RUN-4E40882E\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T21:01:41.099809+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:32.095321+00:00\", \"run_id\": \"RUN-53CC880D\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Run deterministic QA checks for Pizzerija Ali\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:32.095351+00:00\", \"run_id\": \"RUN-53CC880D\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"project_id\": \"PRJ-E2E-03\"}}, {\"timestamp\": \"2026-09-17T21:03:32.106434+00:00\", \"run_id\": \"RUN-53CC880D\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:03:32.106482+00:00\", \"run_id\": \"RUN-53CC880D\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T21:03:32.106503+00:00"
     }
   ],
   "decisions_count": 3,
@@ -59,23 +59,23 @@
     {
       "decision_id": 7,
       "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-3EB89838",
+      "run_id": "RUN-5C6BBE3B",
       "decision_text": "Selected tailored color palette and messaging for Restavracija",
-      "timestamp": "2026-09-17T21:01:41.072610+00:00"
+      "timestamp": "2026-09-17T21:03:32.078992+00:00"
     },
     {
       "decision_id": 8,
       "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-3EB89838",
+      "run_id": "RUN-5C6BBE3B",
       "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-17T21:01:41.072610+00:00"
+      "timestamp": "2026-09-17T21:03:32.078992+00:00"
     },
     {
       "decision_id": 9,
       "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-4E40882E",
+      "run_id": "RUN-53CC880D",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T21:01:41.099809+00:00"
+      "timestamp": "2026-09-17T21:03:32.106503+00:00"
     }
   ],
   "supervisor_audits": {
