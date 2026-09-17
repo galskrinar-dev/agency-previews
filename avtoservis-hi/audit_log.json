@@ -1,7 +1,7 @@
 {
   "project_id": "PROJ-FACEBOOK-FB-fb_webhook_user_1",
-  "start_time": "2026-09-17T21:02:56.023561+00:00",
-  "exported_at": "2026-09-17T21:02:59.482114+00:00",
+  "start_time": "2026-09-17T21:03:49.776911+00:00",
+  "exported_at": "2026-09-17T21:03:51.986534+00:00",
   "tasks_count": 2,
   "tasks": [
     {
@@ -13,8 +13,8 @@
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{\"brief\": {\"client_name\": \"Avtoservis Hi\", \"business_type\": \"Avtomehanik\", \"requirements\": [\"Cenik\", \"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T21:02:56.053276+00:00",
-      "updated_at": "2026-09-17T21:02:56.069093+00:00"
+      "created_at": "2026-09-17T21:03:49.807482+00:00",
+      "updated_at": "2026-09-17T21:03:49.823935+00:00"
     },
     {
       "task_id": "TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1",
@@ -25,33 +25,33 @@
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T21:02:56.076100+00:00",
-      "updated_at": "2026-09-17T21:02:56.093097+00:00"
+      "created_at": "2026-09-17T21:03:49.831845+00:00",
+      "updated_at": "2026-09-17T21:03:49.848640+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-997A2832",
+      "run_id": "RUN-0A801ABE",
       "task_id": "TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1",
       "status": "SUCCESS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-facebook-fb-fb_webhook_user_1\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Avtoservis Hi\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-facebook-fb-fb_webhook_user_1\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-facebook-fb-fb_webhook_user_1\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
       "evidence_json": "[\"Created index.html (12011 bytes)\", \"Created styles.css (12130 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
       "decisions_json": "[\"Selected tailored color palette and messaging for Avtomehanik\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
       "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:02:56.060657+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Build website in sandbox for Avtoservis Hi\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:02:56.060699+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Build website in sandbox for Avtoservis Hi\"}}, {\"timestamp\": \"2026-09-17T21:02:56.067718+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Avtoservis Hi\", \"archetype\": \"ModernCorporate\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Avtoservis Hi' v arhetipu ModernCorporate s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Avtoservis Hi' (Avtomehanik). Pregledujem izku\\u0161nje preteklih 204 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Avtoservis Hi' predlagam strate\\u0161ko pozicioniranje: Zanesljiv avtoservis z napredno diagnostiko in po\\u0161tenim, transparentnim pristopom.. Izbran arhetip: ModernCorporate.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Precision Cobalt & Racing Orange' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Avtoservis Hi' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:02:56.067780+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Avtoservis Hi\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Avtoservis Hi' (Avtomehanik). Pregledujem izku\\u0161nje preteklih 204 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Avtoservis Hi' predlagam strate\\u0161ko pozicioniranje: Zanesljiv avtoservis z napredno diagnostiko in po\\u0161tenim, transparentnim pristopom.. Izbran arhetip: ModernCorporate.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Precision Cobalt & Racing Orange' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Avtoservis Hi' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:02:56.069043+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:02:56.069082+00:00\", \"run_id\": \"RUN-997A2832\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-17T21:02:56.069093+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:49.814654+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Build website in sandbox for Avtoservis Hi\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:49.814693+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Build website in sandbox for Avtoservis Hi\"}}, {\"timestamp\": \"2026-09-17T21:03:49.822606+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Avtoservis Hi\", \"archetype\": \"ModernCorporate\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Avtoservis Hi' v arhetipu ModernCorporate s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Avtoservis Hi' (Avtomehanik). Pregledujem izku\\u0161nje preteklih 230 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Avtoservis Hi' predlagam strate\\u0161ko pozicioniranje: Zanesljiv avtoservis z napredno diagnostiko in po\\u0161tenim, transparentnim pristopom.. Izbran arhetip: ModernCorporate.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Precision Cobalt & Racing Orange' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Avtoservis Hi' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:49.822647+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Avtoservis Hi\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Avtoservis Hi' (Avtomehanik). Pregledujem izku\\u0161nje preteklih 230 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Avtoservis Hi' predlagam strate\\u0161ko pozicioniranje: Zanesljiv avtoservis z napredno diagnostiko in po\\u0161tenim, transparentnim pristopom.. Izbran arhetip: ModernCorporate.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Precision Cobalt & Racing Orange' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Avtoservis Hi' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:49.823884+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:03:49.823924+00:00\", \"run_id\": \"RUN-0A801ABE\", \"task_id\": \"TASK-BUILD-PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-17T21:03:49.823935+00:00"
     },
     {
-      "run_id": "RUN-8910B43C",
+      "run_id": "RUN-CB7D917C",
       "task_id": "TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1",
       "status": "PASS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-facebook-fb-fb_webhook_user_1\\\\index.html\", \"type\": \"html_verified\"}]",
       "evidence_json": "[\"VERIFIED: index.html exists (12011 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:02:56.082718+00:00\", \"run_id\": \"RUN-8910B43C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Run deterministic QA checks for Avtoservis Hi\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:02:56.082768+00:00\", \"run_id\": \"RUN-8910B43C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\"}}, {\"timestamp\": \"2026-09-17T21:02:56.093041+00:00\", \"run_id\": \"RUN-8910B43C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:02:56.093087+00:00\", \"run_id\": \"RUN-8910B43C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T21:02:56.093097+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:49.839612+00:00\", \"run_id\": \"RUN-CB7D917C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\", \"goal\": \"Run deterministic QA checks for Avtoservis Hi\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:49.839685+00:00\", \"run_id\": \"RUN-CB7D917C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"project_id\": \"PROJ-FACEBOOK-FB-fb_webhook_user_1\"}}, {\"timestamp\": \"2026-09-17T21:03:49.848583+00:00\", \"run_id\": \"RUN-CB7D917C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:03:49.848630+00:00\", \"run_id\": \"RUN-CB7D917C\", \"task_id\": \"TASK-QA-PROJ-FACEBOOK-FB-fb_webhook_user_1-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T21:03:49.848640+00:00"
     }
   ],
   "decisions_count": 3,
@@ -59,23 +59,23 @@
     {
       "decision_id": 7,
       "project_id": "PROJ-FACEBOOK-FB-fb_webhook_user_1",
-      "run_id": "RUN-997A2832",
+      "run_id": "RUN-0A801ABE",
       "decision_text": "Selected tailored color palette and messaging for Avtomehanik",
-      "timestamp": "2026-09-17T21:02:56.069093+00:00"
+      "timestamp": "2026-09-17T21:03:49.823935+00:00"
     },
     {
       "decision_id": 8,
       "project_id": "PROJ-FACEBOOK-FB-fb_webhook_user_1",
-      "run_id": "RUN-997A2832",
+      "run_id": "RUN-0A801ABE",
       "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-17T21:02:56.069093+00:00"
+      "timestamp": "2026-09-17T21:03:49.823935+00:00"
     },
     {
       "decision_id": 9,
       "project_id": "PROJ-FACEBOOK-FB-fb_webhook_user_1",
-      "run_id": "RUN-8910B43C",
+      "run_id": "RUN-CB7D917C",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T21:02:56.093097+00:00"
+      "timestamp": "2026-09-17T21:03:49.848640+00:00"
     }
   ],
   "supervisor_audits": {
