@@ -1,81 +1,81 @@
 {
-  "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
-  "start_time": "2026-09-17T21:03:12.759136+00:00",
-  "exported_at": "2026-09-17T21:03:15.501196+00:00",
+  "project_id": "PROJ-TEST-ZIGA-AGENCY",
+  "start_time": "2026-09-17T21:02:01.654604+00:00",
+  "exported_at": "2026-09-17T21:02:03.791418+00:00",
   "tasks_count": 2,
   "tasks": [
     {
-      "task_id": "TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
-      "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
+      "task_id": "TASK-BUILD-PROJ-TEST-ZIGA-AGENCY",
+      "project_id": "PROJ-TEST-ZIGA-AGENCY",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Agencija Žiga",
       "status": "SUCCESS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
-      "context_json": "{\"brief\": {\"client_name\": \"Agencija \\u017diga\", \"business_type\": \"Digitalna agencija in kreativne storitve\", \"requirements\": [\"Cenik\", \"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"ziga@agencija.si\", \"color_scheme\": \"\"}}",
+      "context_json": "{\"brief\": {\"client_name\": \"Agencija \\u017diga\", \"business_type\": \"Digitalna agencija in izdelava spletnih strani\", \"requirements\": [\"Cenik\", \"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"ziga@agencijaziga.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T21:03:12.798218+00:00",
-      "updated_at": "2026-09-17T21:03:12.818297+00:00"
+      "created_at": "2026-09-17T21:02:01.701896+00:00",
+      "updated_at": "2026-09-17T21:02:01.720578+00:00"
     },
     {
-      "task_id": "TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1",
-      "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
+      "task_id": "TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1",
+      "project_id": "PROJ-TEST-ZIGA-AGENCY",
       "assigned_agent": "qa",
       "goal": "Run deterministic QA checks for Agencija Žiga",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T21:03:12.826626+00:00",
-      "updated_at": "2026-09-17T21:03:12.851692+00:00"
+      "created_at": "2026-09-17T21:02:01.728641+00:00",
+      "updated_at": "2026-09-17T21:02:01.746650+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-33032FD5",
-      "task_id": "TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
+      "run_id": "RUN-2EA5002F",
+      "task_id": "TASK-BUILD-PROJ-TEST-ZIGA-AGENCY",
       "status": "SUCCESS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-email-email-ziga_podjetnik_gmail_com-35587\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Agencija \\u017diga\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-email-email-ziga_podjetnik_gmail_com-35587\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-email-email-ziga_podjetnik_gmail_com-35587\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
-      "evidence_json": "[\"Created index.html (12617 bytes)\", \"Created styles.css (12143 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
-      "decisions_json": "[\"Selected tailored color palette and messaging for Digitalna agencija in kreativne storitve\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-ziga-agency\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Agencija \\u017diga\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-ziga-agency\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-ziga-agency\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
+      "evidence_json": "[\"Created index.html (12631 bytes)\", \"Created styles.css (12143 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
+      "decisions_json": "[\"Selected tailored color palette and messaging for Digitalna agencija in izdelava spletnih strani\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
       "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:12.806107+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"goal\": \"Build website in sandbox for Agencija \\u017diga\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:12.806163+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"goal\": \"Build website in sandbox for Agencija \\u017diga\"}}, {\"timestamp\": \"2026-09-17T21:03:12.816781+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Agencija \\u017diga\", \"archetype\": \"NeoBrutalistAgency\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Agencija \\u017diga' v arhetipu NeoBrutalistAgency s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Agencija \\u017diga' (Digitalna agencija in kreativne storitve). Pregledujem izku\\u0161nje preteklih 207 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Agencija \\u017diga' predlagam strate\\u0161ko pozicioniranje: Vodilni digitalni studio za sodobne spletne re\\u0161itve in visoko-konverzijski digitalni nastop.. Izbran arhetip: NeoBrutalistAgency.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Cyber Obsidian & Electric Cyan' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Agencija \\u017diga' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:12.816827+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Agencija \\u017diga\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Agencija \\u017diga' (Digitalna agencija in kreativne storitve). Pregledujem izku\\u0161nje preteklih 207 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Agencija \\u017diga' predlagam strate\\u0161ko pozicioniranje: Vodilni digitalni studio za sodobne spletne re\\u0161itve in visoko-konverzijski digitalni nastop.. Izbran arhetip: NeoBrutalistAgency.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Cyber Obsidian & Electric Cyan' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Agencija \\u017diga' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:03:12.818222+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:03:12.818283+00:00\", \"run_id\": \"RUN-33032FD5\", \"task_id\": \"TASK-BUILD-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-17T21:03:12.818297+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:02:01.710104+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-ZIGA-AGENCY\", \"goal\": \"Build website in sandbox for Agencija \\u017diga\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:02:01.710154+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"goal\": \"Build website in sandbox for Agencija \\u017diga\"}}, {\"timestamp\": \"2026-09-17T21:02:01.718204+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Agencija \\u017diga\", \"archetype\": \"NeoBrutalistAgency\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Agencija \\u017diga' v arhetipu NeoBrutalistAgency s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Agencija \\u017diga' (Digitalna agencija in izdelava spletnih strani). Pregledujem izku\\u0161nje preteklih 201 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Agencija \\u017diga' predlagam strate\\u0161ko pozicioniranje: Vodilni digitalni studio za sodobne spletne re\\u0161itve in visoko-konverzijski digitalni nastop.. Izbran arhetip: NeoBrutalistAgency.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Cyber Obsidian & Electric Cyan' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Agencija \\u017diga' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:02:01.718237+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Agencija \\u017diga\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Agencija \\u017diga' (Digitalna agencija in izdelava spletnih strani). Pregledujem izku\\u0161nje preteklih 201 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Agencija \\u017diga' predlagam strate\\u0161ko pozicioniranje: Vodilni digitalni studio za sodobne spletne re\\u0161itve in visoko-konverzijski digitalni nastop.. Izbran arhetip: NeoBrutalistAgency.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Cyber Obsidian & Electric Cyan' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Agencija \\u017diga' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-17T21:02:01.720501+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T21:02:01.720559+00:00\", \"run_id\": \"RUN-2EA5002F\", \"task_id\": \"TASK-BUILD-PROJ-TEST-ZIGA-AGENCY\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-17T21:02:01.720578+00:00"
     },
     {
-      "run_id": "RUN-8BAB2ACA",
-      "task_id": "TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1",
+      "run_id": "RUN-2A0FD550",
+      "task_id": "TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1",
       "status": "PASS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-email-email-ziga_podjetnik_gmail_com-35587\\\\index.html\", \"type\": \"html_verified\"}]",
-      "evidence_json": "[\"VERIFIED: index.html exists (12617 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-ziga-agency\\\\index.html\", \"type\": \"html_verified\"}]",
+      "evidence_json": "[\"VERIFIED: index.html exists (12631 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T21:03:12.835065+00:00\", \"run_id\": \"RUN-8BAB2ACA\", \"task_id\": \"TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\", \"goal\": \"Run deterministic QA checks for Agencija \\u017diga\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:03:12.835115+00:00\", \"run_id\": \"RUN-8BAB2ACA\", \"task_id\": \"TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1\", \"project_id\": \"PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587\"}}, {\"timestamp\": \"2026-09-17T21:03:12.851631+00:00\", \"run_id\": \"RUN-8BAB2ACA\", \"task_id\": \"TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:03:12.851681+00:00\", \"run_id\": \"RUN-8BAB2ACA\", \"task_id\": \"TASK-QA-PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T21:03:12.851692+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T21:02:01.736554+00:00\", \"run_id\": \"RUN-2A0FD550\", \"task_id\": \"TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-ZIGA-AGENCY\", \"goal\": \"Run deterministic QA checks for Agencija \\u017diga\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T21:02:01.736597+00:00\", \"run_id\": \"RUN-2A0FD550\", \"task_id\": \"TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1\", \"project_id\": \"PROJ-TEST-ZIGA-AGENCY\"}}, {\"timestamp\": \"2026-09-17T21:02:01.746593+00:00\", \"run_id\": \"RUN-2A0FD550\", \"task_id\": \"TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T21:02:01.746639+00:00\", \"run_id\": \"RUN-2A0FD550\", \"task_id\": \"TASK-QA-PROJ-TEST-ZIGA-AGENCY-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T21:02:01.746650+00:00"
     }
   ],
   "decisions_count": 3,
   "decisions": [
     {
       "decision_id": 1,
-      "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
-      "run_id": "RUN-33032FD5",
-      "decision_text": "Selected tailored color palette and messaging for Digitalna agencija in kreativne storitve",
-      "timestamp": "2026-09-17T21:03:12.818297+00:00"
+      "project_id": "PROJ-TEST-ZIGA-AGENCY",
+      "run_id": "RUN-2EA5002F",
+      "decision_text": "Selected tailored color palette and messaging for Digitalna agencija in izdelava spletnih strani",
+      "timestamp": "2026-09-17T21:02:01.720578+00:00"
     },
     {
       "decision_id": 2,
-      "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
-      "run_id": "RUN-33032FD5",
+      "project_id": "PROJ-TEST-ZIGA-AGENCY",
+      "run_id": "RUN-2EA5002F",
       "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-17T21:03:12.818297+00:00"
+      "timestamp": "2026-09-17T21:02:01.720578+00:00"
     },
     {
       "decision_id": 3,
-      "project_id": "PROJ-EMAIL-EMAIL-ziga_podjetnik_gmail_com-35587",
-      "run_id": "RUN-8BAB2ACA",
+      "project_id": "PROJ-TEST-ZIGA-AGENCY",
+      "run_id": "RUN-2A0FD550",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T21:03:12.851692+00:00"
+      "timestamp": "2026-09-17T21:02:01.746650+00:00"
     }
   ],
   "supervisor_audits": {
