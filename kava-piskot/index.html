@@ -3,265 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kava & Piškot | Kavarna & Pekarna</title>
-    <meta name="description" content="Kjer vsako jutro zadiši po sveže praženi specialty kavi, hrustljavih maslenih piškotih in toplih domačih zajtrkih v centru mesta.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Kava & Piškot — Obrtna kavarna & ročna pekarna</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigacijska vrstica -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="brand-logo">Kava & Piškot</a>
-            <nav class="nav-links">
-                <a href="#storitve">Storitve</a>
-                <a href="#o-nas">O nas</a>
-                <a href="#mnenja">Mnenja</a>
-                <a href="#faq">FAQ</a>
-                <a href="#kontakt" class="btn-nav">Kontakt & Naročila</a>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <div class="toast-content">
+            <h4 id="toast-title">Uspešno!</h4>
+            <p id="toast-msg">Vaše naročilo je bilo zabeleženo.</p>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-mark">K&P</span>
+                <span class="logo-text">Kava & Piškot</span>
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="#ponudba">Ponudba</a>
+                <a href="#zgodba">O Obrti</a>
+                <a href="#ambient">Ambient</a>
+                <a href="#lokacija">Lokacija & Čas</a>
             </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-outline" id="open-table-btn">
+                    <i class="fa-regular fa-calendar-days"></i> Rezerviraj mizo
+                </button>
+                <button class="btn btn-primary" id="open-order-btn">
+                    <i class="fa-solid fa-cake-candles"></i> Naroči torto
+                </button>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Meni">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <button class="close-drawer" id="close-drawer"><i class="fa-solid fa-xmark"></i></button>
+        <nav class="mobile-nav">
+            <a href="#ponudba" class="mobile-link">Ponudba</a>
+            <a href="#zgodba" class="mobile-link">O Obrti</a>
+            <a href="#ambient" class="mobile-link">Ambient</a>
+            <a href="#lokacija" class="mobile-link">Lokacija & Čas</a>
+        </nav>
+        <div class="mobile-actions">
+            <button class="btn btn-outline mobile-btn" id="m-table-btn">Rezerviraj mizo</button>
+            <button class="btn btn-primary mobile-btn" id="m-order-btn">Naroči torto</button>
+        </div>
+    </div>
+
     <main>
-    
-    <!-- Hero Razdelek (Modern Split Hero z vizualno kartico) -->
-    <section class="hero hero-split">
-        <div class="container hero-split-grid">
-            <div class="hero-content">
-                <div class="badge-pill">★ Obrtna kavarna & ročna pekarna piškotov</div>
-                <h1>Kava & Piškot</h1>
-                <p class="hero-subtext">Kjer vsako jutro zadiši po sveže praženi specialty kavi, hrustljavih maslenih piškotih in toplih domačih zajtrkih v centru mesta.</p>
-                <div class="hero-actions">
-                    <a href="#kontakt" class="btn-primary">Raziščite ponudbo</a>
-                    <a href="#storitve" class="btn-secondary">Naročilo tort & kontakt</a>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-num">100%</span>
-                        <span class="stat-label">Zadovoljstvo strank</span>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <div class="badge-open">
+                            <span class="pulse-dot"></span>
+                            ODPRTO DANES
+                        </div>
+                        <div class="badge-rating">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span>5.0 ★ (140+ ocen)</span>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-num">10+</span>
-                        <span class="stat-label">Let izkušenj</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">5.0 ★</span>
-                        <span class="stat-label">Ocena storitev</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual-col">
-                <div class="hero-visual-card">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Kava & Piškot" class="hero-img">
-                    <div class="hero-floating-pill">
-                        <span class="pulse-dot"></span>
-                        <span>Obrtna kavarna & ročna pekarna piškotov</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Storitve -->
-    <section id="storitve" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Naša dnevna obrtna ponudba</h2>
-                <p>Vse pripravljeno ročno z najkakovostnejšimi lokalnimi sestavinami in pravo strastjo.</p>
-            </div>
-            <div class="services-grid">
-                
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Sveže pražena Specialty Kava</h3>
-                <span class="price-tag">od 1,90 €</span>
-            </div>
-            <p>100% enotirna Arabica, kremast cappuccino, silky flat white ter osvežilen cold brew.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Domači Masleni Piškoti</h3>
-                <span class="price-tag">od 3,50 € / 100g</span>
-            </div>
-            <p>Tradicionalno ročno pečeni masleni piškoti z belgijsko čokolado, vanilijo in praženimi lešniki.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Topli Zajtrki & Prigrizki</h3>
-                <span class="price-tag">od 4,80 €</span>
-            </div>
-            <p>Vsak dan sveže pečeni masleni rogljički, avokado toast s poširanim jajcem ter sveži smutiji.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Naročila Tort po meri</h3>
-                <span class="price-tag">po naročilu</span>
-            </div>
-            <p>Unikatne ročno dekorirane torte iz naravnih sestavin za rojstne dneve, poroke in praznovanja.</p>
-        </div>
-            </div>
-        </div>
-    </section>
+                    <h1 class="hero-title">Umetnost v vsaki skodelici, <em>strast</em> v vsakem grižljaju.</h1>
+                    <p class="hero-description">Dobrodošli v oazi miru sredi Starega trga. Kjer se dišava sveže pražene specialty kave prepleta z vonjem maslenih piškotov in ročno izdelanih tort po naročilu.</p>
+                    
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary btn-lg" onclick="document.getElementById('ponudba').scrollIntoView({behavior: 'smooth'})">
+                            <span>Razišči ponudbo</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                        <button class="btn btn-secondary btn-lg" id="hero-order-btn">
+                            <i class="fa-solid fa-gift"></i>
+                            <span>Naročilo po meri</span>
+                        </button>
+                    </div>
 
-    <!-- O nas / Prednosti -->
-    <section id="o-nas" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>Zakaj začeti dan pri nas?</h2>
-                <p>Verjamemo v počasno obrt, pristne okuse in topel ambient, kjer se čas za trenutek ustavi.</p>
-            </div>
-            <div class="features-grid">
-                
-        <div class="feature-card">
-            <div class="feature-icon">☕</div>
-            <h3>Sveže pražena zrna</h3>
-            <p>Kavo izbiramo neposredno od preverjenih pridelovalcev z jasnim poreklom.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🧈</div>
-            <h3>Pravi masleni recepti</h3>
-            <p>Brez umetnih dodatkov ali nadomestkov – le pravo maslo, vanilija in čokolada.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🌿</div>
-            <h3>Prijeten mestni kotiček</h3>
-            <p>Svetel, dišeč ambient z možnostjo hitrega prevzema ali sproščenega posedanja.</p>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mnenja strank -->
-    <section id="mnenja" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Kaj pravijo naši redni gostje</h2>
-                <p>Ponosni na nasmehe tistih, ki svoj dan začnejo z našo kavo in dišečimi piškoti.</p>
-            </div>
-            <div class="testimonials-grid">
-                
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p>"Najboljši piškoti v mestu, brez konkurence! Kava pa je točno takšna, kot mora biti – polnega okusa in popolne kreme."</p>
-            <strong>- Ana M., Ljubljana</strong>
-        </div>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p>"Odličen ambient za jutranji zajtrk ali kratek pobeg med delom. Masleni rogljički so vedno še topli!"</p>
-            <strong>- Urban K.</strong>
-        </div>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p>"Naročili smo rojstnodnevno torto in vsi gostje so bili navdušeni. Ne presladka, ravno prav sočna in čudovito okrašena."</p>
-            <strong>- Nina V.</strong>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pogosta vprašanja (FAQ) -->
-    <section id="faq" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>Pogosta vprašanja o obisku in naročilih</h2>
-                <p>Odgovori na ključna vprašanja naših obiskovalcev in strank.</p>
-            </div>
-            <div class="faq-accordion">
-                
-        <div class="faq-card">
-            <button type="button" class="faq-question">
-                <span>Kdaj je pri vas na voljo sveže pečeno pecivo?</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Piškoti in rogljički se pečejo vsako jutro sproti, tako da vas že ob odprtju pričaka topel vonj sveže peke.</p>
-            </div>
-        </div>
-        <div class="faq-card">
-            <button type="button" class="faq-question">
-                <span>Kako poteka naročilo tort za praznovanja?</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Naročila sprejemamo prek našega kontaktnega obrazca ali telefona vsaj 3 do 5 dni pred želenim datumom prevzema.</p>
-            </div>
-        </div>
-        <div class="faq-card">
-            <button type="button" class="faq-question">
-                <span>Ali ponujate tudi rastlinske napitke za kavo?</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Seveda! Na voljo imamo ovseno, mandljevo in sojino mleko vrhunske baristične kakovosti.</p>
-            </div>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontakt & Rezervacija -->
-    <section id="kontakt" class="section-padding">
-        <div class="container contact-container">
-            <div class="contact-info">
-                <h2>Naročilo tort & kontakt</h2>
-                <p>Pošljite nam povpraševanje za naročilo slaščic ali pa nas preprosto obiščite na sveži kavi.</p>
-                
-                <div class="info-block">
-                    <strong>📍 Lokacija & Naslov:</strong>
-                    <p>Slovenija</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>100% Specialty zrna</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-wheat-awn">Letnik</i>
+                            <span>Domače maslo & moka</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Dnevno sveže</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="info-block">
-                    <strong>🕒 Delovni čas:</strong>
-                    <p>Ponedeljek - Petek: 08:00 - 18:00<br>Sobota: 08:00 - 13:00</p>
-                </div>
-                <div class="info-block">
-                    <strong>✉️ E-pošta:</strong>
-                    <p><a href="mailto:"></a></p>
-                </div>
-                <div class="info-block">
-                    <strong>📞 Telefonska številka:</strong>
-                    <p><a href="tel:+386 (0)40 123 456">+386 (0)40 123 456</a></p>
+
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Kava & Piškot Ambient" loading="eager">
+                        <div class="floating-card">
+                            <div class="fc-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                            <div class="fc-text">
+                                <strong>Dnevna peka</strong>
+                                <span>Kroasani pečeni ob 07:00</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="contact-form-wrap">
-                <form id="contact-form">
-                    <h3>Pošljite povpraševanje</h3>
-                    <div class="form-group">
-                        <label for="name">Vaše ime in priimek *</label>
-                        <input type="text" id="name" required placeholder="Janez Novak">
+        <!-- Bento Grid Offer Section -->
+        <section class="offer-section" id="ponudba">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="sub-title">Domača delikatesa</span>
+                    <h2>Naša skrbno izbrana ponudba</h2>
+                    <p>Vsak izdelek v naši vitrini je rezultat ur potrpežljivega dela in vrhunskih sestavin.</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Vse</button>
+                    <button class="filter-btn" data-filter="kava">Specialty Kava</button>
+                    <button class="filter-btn" data-filter="piskoti">Domači Piškoti</button>
+                    <button class="filter-btn" data-filter="torte">Torte po meri</button>
+                    <button class="filter-btn" data-filter="zajtrki">Zajtrki</button>
+                </div>
+
+                <!-- Bento Grid Container -->
+                <div class="bento-grid" id="bento-grid">
+                    
+                    <!-- Item 1 -->
+                    <div class="bento-card" data-category="kava">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Cortado Espresso" loading="lazy">
+                            <span class="price-tag">3.20 €</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Specialty Kava</span>
+                            <h3>Signature Cortado</h3>
+                            <p class="ingredients">Dvojni espresso iz etiopskih zrn, svilnato toplo mleko, mikro-pena.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-regular fa-clock"></i> 4 min</span>
+                                <button class="btn-icon" onclick="openOrderModalWithItem('Signature Cortado')"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Vaš e-naslov *</label>
-                        <input type="email" id="email" required placeholder="janez@gmail.com">
+
+                    <!-- Item 2 -->
+                    <div class="bento-card" data-category="piskoti">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="Masleni piškoti" loading="lazy">
+                            <span class="price-tag">4.50 €</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Domači Piškoti</span>
+                            <h3>Hrustljavi Masleni Piškoti</h3>
+                            <p class="ingredients">Slovensko kmečko maslo, Bourbon vanilija, temna čokolada 70%.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-solid fa-box"></i> Pakiranje 250g</span>
+                                <button class="btn-icon" onclick="openOrderModalWithItem('Masleni Piškoti 250g')"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Telefonska številka</label>
-                        <input type="tel" id="phone" placeholder="+386 (0)40 123 456">
+
+                    <!-- Item 3 -->
+                    <div class="bento-card featured-span" data-category="torte">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Ročno pečene torte" loading="lazy">
+                            <span class="price-tag">od 35.00 €</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Torte po meri</span>
+                            <h3>Artisanal Čokoladna Harmony</h3>
+                            <p class="ingredients">Biskvit z lešniki, kremasta ganache čokolada, malinov coulis, ročna dekoracija.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-regular fa-calendar"></i> Naročilo 48h prej</span>
+                                <button class="btn btn-primary btn-sm" onclick="openModal('cake')">Naroči torto</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Vaše sporočilo ali želeni termin *</label>
-                        <textarea id="message" rows="4" required placeholder="Opišite kaj potrebujete..."></textarea>
+
+                    <!-- Item 4 -->
+                    <div class="bento-card" data-category="zajtrki">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Domači zajtrki" loading="lazy">
+                            <span class="price-tag">6.80 €</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Zajtrki</span>
+                            <h3>Pariški Masleni Kroasan</h3>
+                            <p class="ingredients">Sveže pečen listnato-masleni kroasan, domača figova marmelada, skuta.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-regular fa-clock"></i> Postreženo toplo</span>
+                                <button class="btn-icon" onclick="openOrderModalWithItem('Pariški Masleni Kroasan')"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn-primary btn-block">Oddaj povpraševanje</button>
-                    <p id="form-feedback" class="form-feedback"></p>
-                </form>
+
+                    <!-- Item 5 -->
+                    <div class="bento-card" data-category="kava">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Pour Over Kava" loading="lazy">
+                            <span class="price-tag">4.10 €</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Specialty Kava</span>
+                            <h3>V60 Pour Over (Kenija)</h3>
+                            <p class="ingredients">Ročno prelivana kava s sadnimi notami črnega ribeza in jasmina.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-regular fa-clock"></i> 6 min</span>
+                                <button class="btn-icon" onclick="openOrderModalWithItem('V60 Pour Over')"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="bento-card" data-category="torte">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80" alt="Sadna tortica" loading="lazy">
+                            <span class="price-tag">5.20 € / kos</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="category-tag">Torte po meri</span>
+                            <h3>Dnevna Sadna Tartlet</h3>
+                            <p class="ingredients">Krhko masleno testo, vanilijeva krema patissière, sveže jagodičevje.</p>
+                            <div class="card-footer">
+                                <span class="prep-time"><i class="fa-solid fa-check"></i> Na voljo v vitrini</span>
+                                <button class="btn-icon" onclick="openOrderModalWithItem('Dnevna Sadna Tartlet')"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section" id="zgodba">
+            <div class="section-container">
+                <div class="story-grid">
+                    <div class="story-text">
+                        <span class="sub-title">O naši obrti</span>
+                        <h2>Strast, ki se je rodila iz ljubezni do prave arome</h2>
+                        <p class="lead-text">Pri Kava & Piškot verjamemo, da je vsak trenutek ob skodelici kave in grižljaju piškota lahko majhen praznik.</p>
+                        <p>Naša zgodba se je začela z majhno mlinsko pečjo in sanjami o ustvarjanju prostora, kjer se čas ustavi. Uporabljamo izključno lokalne sestavine slovenskih kmetij, ekološko maslo in skrbno izbrana specialty zrna, ki jih pražimo v majhnih serijah.</p>
+                        
+                        <div class="story-stats">
+                            <div class="stat-box">
+                                <h3>100%</h3>
+                                <p>Naravne sestavine</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3>12+</h3>
+                                <p>Let tradicije peke</p>
+                            </div>
+                            <div class="stat-box">
+                                <h3>50k+</h3>
+                                <p>Zadovoljnih gostov</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-image-group">
+                        <div class="img-main">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80" alt="Priprava peke" loading="lazy">
+                        </div>
+                        <div class="img-badge">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Moka" loading="lazy">
+                            <div class="badge-inner">
+                                <i class="fa-solid fa-award"></i>
+                                <span>Priznanje za najboljšo obrtno pekarno 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ambient Showcase -->
+        <section class="ambient-section" id="ambient">
+            <div class="section-container">
+                <div class="section-header center">
+                    <span class="sub-title">Topel ambient</span>
+                    <h2>Kje domuje domačnost</h2>
+                </div>
+                <div class="ambient-gallery">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Kavarna interior" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" alt="Skodelica kave" loading="lazy"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507133758451-36ba62b2e88a?auto=format&fit=crop&w=800&q=80" alt="Ročno delo" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <div class="section-header center">
+                    <span class="sub-title">Mnenja gostov</span>
+                    <h2>Kaj pravijo obiskovalci</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="t-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Absolutno najboljša kava v Ljubljani! Masleni piškoti pa te popeljejo naravnost v otroštvo. Toplo priporočam vsakemu gurmanu."</p>
+                        <div class="t-author">
+                            <strong>Ana Kovač</strong>
+                            <span>Redna gostja</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="t-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Naročil torto za rojstni dan. Vsi gostje so bili navdušeni nad okusom in čudovito estetsko izdelavo. Profesionalno in hitro!"</p>
+                        <div class="t-author">
+                            <strong>Marko Zupan</strong>
+                            <span>Naročnik torte</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="t-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Ambient je čudovit za jutranje delo ali klepet s prijatelji. Osebje izjemno prijazno, vonj po sveži peki pa nepozaben."</p>
+                        <div class="t-author">
+                            <strong>Tina Novak</strong>
+                            <span>Ljubiteljica kave</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Hours Section -->
+        <section class="location-section" id="lokacija">
+            <div class="section-container">
+                <div class="location-grid">
+                    <div class="location-info">
+                        <span class="sub-title">Obiščite nas</span>
+                        <h2>Stari trg 12, Ljubljana</h2>
+                        <p>Nahajamo se v idiličnem središču starega mestnega jedra Ljubljane. Pridite na jutranjo kavo ali popoldanski posladek.</p>
+                        
+                        <div class="hours-list">
+                            <div class="hour-row">
+                                <span>Ponedeljek – Četrtek</span>
+                                <strong>07:00 – 20:00</strong>
+                            </div>
+                            <div class="hour-row">
+                                <span>Petek – Sobota</span>
+                                <strong>07:00 – 22:00</strong>
+                            </div>
+                            <div class="hour-row">
+                                <span>Nedelja & Prazniki</span>
+                                <strong>08:00 – 18:00</strong>
+                            </div>
+                        </div>
+
+                        <div class="location-actions">
+                            <button class="btn btn-primary" onclick="openModal('table')"><i class="fa-regular fa-calendar-days"></i> Rezerviraj mizo</button>
+                            <a href="https://maps.google.com" target="_blank" class="btn btn-outline"><i class="fa-solid fa-map-location-dot"></i> Google Zemljevid</a>
+                        </div>
+                    </div>
+
+                    <div class="location-card-visual">
+                        <div class="map-mockup">
+                            <div class="map-pin-pulse">
+                                <i class="fa-solid fa-mug-hot"></i>
+                                <span>Kava & Piškot</span>
+                            </div>
+                            <div class="map-details-overlay">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <strong>Stari trg 12</strong>
+                                    <p>1000 Ljubljana, Slovenija</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Noga -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Kava & Piškot. Vse pravice pridržane.</p>
-            <p class="designer-credit">Oblikovanje in avtomatizacija: <strong>Gal Skrinar</strong> (<a href="https://galskrinar.vercel.app" target="_blank">Portfolio</a>)</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-mark">K&P</span>
+                        <span class="logo-text">Kava & Piškot</span>
+                    </a>
+                    <p>Obrtna kavarna & ročna pekarna v osrčju Ljubljane.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Hitre povezave</h4>
+                    <a href="#ponudba">Ponudba</a>
+                    <a href="#zgodba">O obrti</a>
+                    <a href="#ambient">Ambient</a>
+                    <a href="#lokacija">Lokacija</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Storitve</h4>
+                    <a href="#" onclick="openModal('table'); return false;">Rezervacija mize</a>
+                    <a href="#" onclick="openModal('cake'); return false;">Naročilo tort</a>
+                    <a href="#ponudba">Cenik izdelkov</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Spremljajte nas</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <p class="newsletter-hint">Prijavite se na novice za sladke popuste.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kava & Piškot d.o.o. Vse pravice pridržane.</p>
+                <p class="crafted-by">Oblikovanje in avtomatizacija: Gal Skrinar</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Interactive Modal (Table Reservation / Cake Order) -->
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal-card" id="modal-card">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-tabs">
+                <button class="m-tab active" id="tab-table-btn" onclick="switchModalTab('table')">Rezervacija mize</button>
+                <button class="m-tab" id="tab-cake-btn" onclick="switchModalTab('cake')">Naročilo torte / Izdelka</button>
+            </div>
+
+            <!-- Table Reservation Form -->
+            <form id="table-form" class="modal-form active">
+                <h3>Rezervirajte svojo mizo</h3>
+                <p>Uživajte v udobju naše kavarne ob izbranem času.</p>
+                
+                <div class="form-group">
+                    <label for="t-name">Ime in priimek</label>
+                    <input type="text" id="t-name" placeholder="npr. Ana Novak" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="t-date">Datum</label>
+                        <input type="date" id="t-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="t-time">Ura</label>
+                        <select id="t-time" required>
+                            <option value="">Izberite uro</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:30">09:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="t-guests">Število oseb</label>
+                    <select id="t-guests" required>
+                        <option value="1">1 oseba</option>
+                        <option value="2" selected>2 osebi</option>
+                        <option value="3">3 osebe</option>
+                        <option value="4">4 osebe</option>
+                        <option value="5+">5+ oseb (skupina)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Potrdi rezervacijo</button>
+            </form>
+
+            <!-- Cake / Item Order Form -->
+            <form id="cake-form" class="modal-form">
+                <h3>Naročilo torte ali izdelka</h3>
+                <p>Izpolnite podatke in pripravili vam bomo svežo mojstrovino.</p>
+                
+                <div class="form-group">
+                    <label for="c-name">Ime in priimek</label>
+                    <input type="text" id="c-name" placeholder="npr. Marko Zupan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-item">Izberite izdelek / torto</label>
+                    <input type="text" id="c-item" placeholder="npr. Artisanal Čokoladna Harmony ali Piškoti" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="c-date">Datum prevzema</label>
+                        <input type="date" id="c-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-phone">Telefon</label>
+                        <input type="tel" id="c-phone" placeholder="041 123 456" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-note">Posebne želje (opcijsko)</label>
+                    <textarea id="c-note" rows="2" placeholder="Alergije, napisi na torto, posebne zahteve..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Pošlji naročilo</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
