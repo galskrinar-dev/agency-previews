@@ -1,74 +1,74 @@
 {
-  "project_id": "PRJ-E2E-02",
-  "start_time": "2026-09-17T16:44:40.399423+00:00",
-  "exported_at": "2026-09-17T16:44:42.595179+00:00",
+  "project_id": "PRJ-W11-02",
+  "start_time": "2026-09-17T16:44:52.453679+00:00",
+  "exported_at": "2026-09-17T16:44:54.872052+00:00",
   "tasks_count": 2,
   "tasks": [
     {
-      "task_id": "TASK-BUILD-PRJ-E2E-02",
-      "project_id": "PRJ-E2E-02",
+      "task_id": "TASK-BUILD-PRJ-W11-02",
+      "project_id": "PRJ-W11-02",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Vodovodne Storitve Novak",
       "status": "FAILED",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{\"brief\": {\"client_name\": \"Vodovodne Storitve Novak\", \"business_type\": \"Vodovodar\", \"requirements\": [\"Opis storitev\", \"Cenik\", \"Kontaktni obrazec\"], \"contact_email\": \"novak@vodovod.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T16:44:40.436213+00:00",
-      "updated_at": "2026-09-17T16:44:40.443674+00:00"
+      "created_at": "2026-09-17T16:44:52.495448+00:00",
+      "updated_at": "2026-09-17T16:44:52.510291+00:00"
     },
     {
-      "task_id": "TASK-QA-PRJ-E2E-02-C1",
-      "project_id": "PRJ-E2E-02",
+      "task_id": "TASK-QA-PRJ-W11-02-C1",
+      "project_id": "PRJ-W11-02",
       "assigned_agent": "qa",
       "goal": "Run deterministic QA checks for Vodovodne Storitve Novak",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T16:44:40.450392+00:00",
-      "updated_at": "2026-09-17T16:44:40.458536+00:00"
+      "created_at": "2026-09-17T16:44:52.521893+00:00",
+      "updated_at": "2026-09-17T16:44:52.535058+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-2A2D6302",
-      "task_id": "TASK-BUILD-PRJ-E2E-02",
+      "run_id": "RUN-AD2FD747",
+      "task_id": "TASK-BUILD-PRJ-W11-02",
       "status": "FAILED",
       "artifacts_json": "[]",
       "evidence_json": "[\"Unhandled Exception during agent run: 'ArtDirectionMinister' object has no attribute 'HERO_IMAGE_LIBRARY'\"]",
       "decisions_json": "[\"Execution halted safely due to unhandled exception.\"]",
       "cost_json": "{\"tokens_used\": 0, \"estimated_usd\": 0.0}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T16:44:40.442825+00:00\", \"run_id\": \"RUN-2A2D6302\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve Novak\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T16:44:40.442856+00:00\", \"run_id\": \"RUN-2A2D6302\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve Novak\"}}, {\"timestamp\": \"2026-09-17T16:44:40.443647+00:00\", \"run_id\": \"RUN-2A2D6302\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 1, \"action\": \"EXCEPTION_CAUGHT\", \"details\": {\"error\": \"Unhandled Exception during agent run: 'ArtDirectionMinister' object has no attribute 'HERO_IMAGE_LIBRARY'\"}}]",
-      "timestamp": "2026-09-17T16:44:40.443674+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T16:44:52.508255+00:00\", \"run_id\": \"RUN-AD2FD747\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve Novak\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T16:44:52.508301+00:00\", \"run_id\": \"RUN-AD2FD747\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve Novak\"}}, {\"timestamp\": \"2026-09-17T16:44:52.510217+00:00\", \"run_id\": \"RUN-AD2FD747\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 1, \"action\": \"EXCEPTION_CAUGHT\", \"details\": {\"error\": \"Unhandled Exception during agent run: 'ArtDirectionMinister' object has no attribute 'HERO_IMAGE_LIBRARY'\"}}]",
+      "timestamp": "2026-09-17T16:44:52.510291+00:00"
     },
     {
-      "run_id": "RUN-121B7ACA",
-      "task_id": "TASK-QA-PRJ-E2E-02-C1",
+      "run_id": "RUN-48700667",
+      "task_id": "TASK-QA-PRJ-W11-02-C1",
       "status": "PASS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-02\\\\index.html\", \"type\": \"html_verified\"}]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-02\\\\index.html\", \"type\": \"html_verified\"}]",
       "evidence_json": "[\"VERIFIED: index.html exists (10946 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T16:44:40.457415+00:00\", \"run_id\": \"RUN-121B7ACA\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-02\", \"goal\": \"Run deterministic QA checks for Vodovodne Storitve Novak\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T16:44:40.457446+00:00\", \"run_id\": \"RUN-121B7ACA\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"project_id\": \"PRJ-E2E-02\"}}, {\"timestamp\": \"2026-09-17T16:44:40.458490+00:00\", \"run_id\": \"RUN-121B7ACA\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T16:44:40.458524+00:00\", \"run_id\": \"RUN-121B7ACA\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T16:44:40.458536+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T16:44:52.532134+00:00\", \"run_id\": \"RUN-48700667\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-02\", \"goal\": \"Run deterministic QA checks for Vodovodne Storitve Novak\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T16:44:52.532208+00:00\", \"run_id\": \"RUN-48700667\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"project_id\": \"PRJ-W11-02\"}}, {\"timestamp\": \"2026-09-17T16:44:52.534900+00:00\", \"run_id\": \"RUN-48700667\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T16:44:52.535024+00:00\", \"run_id\": \"RUN-48700667\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T16:44:52.535058+00:00"
     }
   ],
   "decisions_count": 2,
   "decisions": [
     {
       "decision_id": 3,
-      "project_id": "PRJ-E2E-02",
-      "run_id": "RUN-2A2D6302",
+      "project_id": "PRJ-W11-02",
+      "run_id": "RUN-AD2FD747",
       "decision_text": "Execution halted safely due to unhandled exception.",
-      "timestamp": "2026-09-17T16:44:40.443674+00:00"
+      "timestamp": "2026-09-17T16:44:52.510291+00:00"
     },
     {
       "decision_id": 4,
-      "project_id": "PRJ-E2E-02",
-      "run_id": "RUN-121B7ACA",
+      "project_id": "PRJ-W11-02",
+      "run_id": "RUN-48700667",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T16:44:40.458536+00:00"
+      "timestamp": "2026-09-17T16:44:52.535058+00:00"
     }
   ],
   "supervisor_audits": {
