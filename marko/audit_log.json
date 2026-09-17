@@ -1,74 +1,81 @@
 {
-  "project_id": "PRJ-W11-01",
-  "start_time": "2026-09-17T15:39:28.626231+00:00",
-  "exported_at": "2026-09-17T15:39:31.870638+00:00",
+  "project_id": "PROJ-TEST-SUP-1",
+  "start_time": "2026-09-17T15:40:31.674529+00:00",
+  "exported_at": "2026-09-17T15:40:35.254382+00:00",
   "tasks_count": 2,
   "tasks": [
     {
-      "task_id": "TASK-BUILD-PRJ-W11-01",
-      "project_id": "PRJ-W11-01",
+      "task_id": "TASK-BUILD-PROJ-TEST-SUP-1",
+      "project_id": "PROJ-TEST-SUP-1",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Marko",
-      "status": "FAILED",
+      "status": "SUCCESS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
-      "context_json": "{\"brief\": {\"client_name\": \"Marko\", \"business_type\": \"Frizerski salon\", \"requirements\": [\"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"mail@marko.si\", \"color_scheme\": \"\"}}",
+      "context_json": "{\"brief\": {\"client_name\": \"Marko\", \"business_type\": \"Frizerski salon\", \"requirements\": [\"Cenik\", \"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"marko@frizerski.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T15:39:28.726852+00:00",
-      "updated_at": "2026-09-17T15:39:28.754124+00:00"
+      "created_at": "2026-09-17T15:40:31.775107+00:00",
+      "updated_at": "2026-09-17T15:40:31.811225+00:00"
     },
     {
-      "task_id": "TASK-QA-PRJ-W11-01-C1",
-      "project_id": "PRJ-W11-01",
+      "task_id": "TASK-QA-PROJ-TEST-SUP-1-C1",
+      "project_id": "PROJ-TEST-SUP-1",
       "assigned_agent": "qa",
       "goal": "Run deterministic QA checks for Marko",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T15:39:28.771543+00:00",
-      "updated_at": "2026-09-17T15:39:28.790411+00:00"
+      "created_at": "2026-09-17T15:40:31.830842+00:00",
+      "updated_at": "2026-09-17T15:40:31.896125+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-11F7C399",
-      "task_id": "TASK-BUILD-PRJ-W11-01",
-      "status": "FAILED",
-      "artifacts_json": "[]",
-      "evidence_json": "[\"Unhandled Exception during agent run: name 'btype_lower' is not defined\"]",
-      "decisions_json": "[\"Execution halted safely due to unhandled exception.\"]",
-      "cost_json": "{\"tokens_used\": 0, \"estimated_usd\": 0.0}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:28.742724+00:00\", \"run_id\": \"RUN-11F7C399\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-01\", \"goal\": \"Build website in sandbox for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:28.742811+00:00\", \"run_id\": \"RUN-11F7C399\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"goal\": \"Build website in sandbox for Marko\"}}, {\"timestamp\": \"2026-09-17T15:39:28.753774+00:00\", \"run_id\": \"RUN-11F7C399\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"debate_transcript\": [{\"speaker\": \"MinimalistArtDirector\", \"message\": \"Za Marko (Frizerski salon) predlagam: Zagovarjam zra\\u010den, minimalisti\\u010den studio dizajn z visokim kontrastom, odli\\u010dno tipografijo in umirjenimi prefinjenimi linijami.\"}, {\"speaker\": \"ConversionRewardDesigner\", \"message\": \"Strinjam se z barvno zadr\\u017eanostjo. Aesthetic je vrhunski, vendar morava zagotoviti, da obiskovalec takoj za\\u010duti odzivnost strani. Gumbi morajo imeti otipljiv klik (transform scale 0.98), kartice morajo ob lebdenju gladko reagirati, klic k akciji (CTA) pa mora imeti jasen vizualni fokus. Dodajva otipljiv gumb z rahlim vtisom in privla\\u010dne statisti\\u010dne poudarke.\"}, {\"speaker\": \"MinimalistArtDirector\", \"message\": \"Sprejeto! Integrirajva taktilne mikrogibe brez kri\\u010de\\u010dih efektov, tako da ohraniva \\u010dist editorial videz.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"Oblikovalski studio uspe\\u0161no uskladil estetiko in UX za 'Marko'. Ocena: 100.0%.\"}}, {\"timestamp\": \"2026-09-17T15:39:28.754033+00:00\", \"run_id\": \"RUN-11F7C399\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"EXCEPTION_CAUGHT\", \"details\": {\"error\": \"Unhandled Exception during agent run: name 'btype_lower' is not defined\"}}]",
-      "timestamp": "2026-09-17T15:39:28.754124+00:00"
+      "run_id": "RUN-FF1656EB",
+      "task_id": "TASK-BUILD-PROJ-TEST-SUP-1",
+      "status": "SUCCESS",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Marko\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
+      "evidence_json": "[\"Created index.html (10115 bytes)\", \"Created styles.css (10225 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
+      "decisions_json": "[\"Selected tailored color palette and messaging for Frizerski salon\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
+      "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:40:31.792485+00:00\", \"run_id\": \"RUN-FF1656EB\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-SUP-1\", \"goal\": \"Build website in sandbox for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:40:31.792595+00:00\", \"run_id\": \"RUN-FF1656EB\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"goal\": \"Build website in sandbox for Marko\"}}, {\"timestamp\": \"2026-09-17T15:40:31.805915+00:00\", \"run_id\": \"RUN-FF1656EB\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"debate_transcript\": [{\"speaker\": \"MinimalistArtDirector\", \"message\": \"Za Marko (Frizerski salon) predlagam: Zagovarjam zra\\u010den, minimalisti\\u010den studio dizajn z visokim kontrastom, odli\\u010dno tipografijo in umirjenimi prefinjenimi linijami.\"}, {\"speaker\": \"ConversionRewardDesigner\", \"message\": \"Strinjam se z barvno zadr\\u017eanostjo. Aesthetic je vrhunski, vendar morava zagotoviti, da obiskovalec takoj za\\u010duti odzivnost strani. Gumbi morajo imeti otipljiv klik (transform scale 0.98), kartice morajo ob lebdenju gladko reagirati, klic k akciji (CTA) pa mora imeti jasen vizualni fokus. Dodajva otipljiv gumb z rahlim vtisom in privla\\u010dne statisti\\u010dne poudarke.\"}, {\"speaker\": \"MinimalistArtDirector\", \"message\": \"Sprejeto! Integrirajva taktilne mikrogibe brez kri\\u010de\\u010dih efektov, tako da ohraniva \\u010dist editorial videz.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"Oblikovalski studio uspe\\u0161no uskladil estetiko in UX za 'Marko'. Ocena: 100.0%.\"}}, {\"timestamp\": \"2026-09-17T15:40:31.811059+00:00\", \"run_id\": \"RUN-FF1656EB\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T15:40:31.811195+00:00\", \"run_id\": \"RUN-FF1656EB\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-17T15:40:31.811225+00:00"
     },
     {
-      "run_id": "RUN-D37671F5",
-      "task_id": "TASK-QA-PRJ-W11-01-C1",
+      "run_id": "RUN-C7AE7568",
+      "task_id": "TASK-QA-PROJ-TEST-SUP-1-C1",
       "status": "PASS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-01\\\\index.html\", \"type\": \"html_verified\"}]",
-      "evidence_json": "[\"VERIFIED: index.html exists (9787 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\index.html\", \"type\": \"html_verified\"}]",
+      "evidence_json": "[\"VERIFIED: index.html exists (10115 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:28.787395+00:00\", \"run_id\": \"RUN-D37671F5\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-01\", \"goal\": \"Run deterministic QA checks for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:28.787508+00:00\", \"run_id\": \"RUN-D37671F5\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"project_id\": \"PRJ-W11-01\"}}, {\"timestamp\": \"2026-09-17T15:39:28.790292+00:00\", \"run_id\": \"RUN-D37671F5\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:39:28.790384+00:00\", \"run_id\": \"RUN-D37671F5\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T15:39:28.790411+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:40:31.852349+00:00\", \"run_id\": \"RUN-C7AE7568\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-SUP-1\", \"goal\": \"Run deterministic QA checks for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:40:31.852489+00:00\", \"run_id\": \"RUN-C7AE7568\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"project_id\": \"PROJ-TEST-SUP-1\"}}, {\"timestamp\": \"2026-09-17T15:40:31.896000+00:00\", \"run_id\": \"RUN-C7AE7568\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:40:31.896098+00:00\", \"run_id\": \"RUN-C7AE7568\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T15:40:31.896125+00:00"
     }
   ],
-  "decisions_count": 2,
+  "decisions_count": 3,
   "decisions": [
     {
       "decision_id": 1,
-      "project_id": "PRJ-W11-01",
-      "run_id": "RUN-11F7C399",
-      "decision_text": "Execution halted safely due to unhandled exception.",
-      "timestamp": "2026-09-17T15:39:28.754124+00:00"
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-FF1656EB",
+      "decision_text": "Selected tailored color palette and messaging for Frizerski salon",
+      "timestamp": "2026-09-17T15:40:31.811225+00:00"
     },
     {
       "decision_id": 2,
-      "project_id": "PRJ-W11-01",
-      "run_id": "RUN-D37671F5",
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-FF1656EB",
+      "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
+      "timestamp": "2026-09-17T15:40:31.811225+00:00"
+    },
+    {
+      "decision_id": 3,
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-C7AE7568",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T15:39:28.790411+00:00"
+      "timestamp": "2026-09-17T15:40:31.896125+00:00"
     }
   ],
   "supervisor_audits": {
