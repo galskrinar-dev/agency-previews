@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,28 +27,40 @@
     </header>
 
     <main>
-    <!-- Hero razdelek -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="badge-pill">★ Zanesljiv avtoservis & napredna diagnostika</div>
-            <h1>Janez</h1>
-            <p class="hero-subtext">Popolna skrb za varnost, zanesljivost in brezhibno delovanje vašega jeklenega konjička.</p>
-            <div class="hero-actions">
-                <a href="#kontakt" class="btn-primary">Naročite se na servis</a>
-                <a href="#storitve" class="btn-secondary">Oglejte si storitve</a>
+    
+    <!-- Hero Razdelek (Modern Split Hero z vizualno kartico) -->
+    <section class="hero hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-content">
+                <div class="badge-pill">★ Zanesljiv avtoservis & napredna diagnostika</div>
+                <h1>Janez</h1>
+                <p class="hero-subtext">Popolna skrb za varnost, zanesljivost in brezhibno delovanje vašega jeklenega konjička.</p>
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn-primary">Naročite se na servis</a>
+                    <a href="#storitve" class="btn-secondary">Oglejte si storitve</a>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Zadovoljstvo strank</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Let izkušenj</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">5.0 ★</span>
+                        <span class="stat-label">Ocena storitev</span>
+                    </div>
+                </div>
             </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Zadovoljstvo strank</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">10+</span>
-                    <span class="stat-label">Let izkušenj</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">5.0 ★</span>
-                    <span class="stat-label">Ocena storitev</span>
+            <div class="hero-visual-col">
+                <div class="hero-visual-card">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80" alt="Janez" class="hero-img">
+                    <div class="hero-floating-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Zanesljiv avtoservis & napredna diagnostika</span>
+                    </div>
                 </div>
             </div>
         </div>
