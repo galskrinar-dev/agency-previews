@@ -105,7 +105,7 @@ body {
 }
 
 .hero-immersive {
-    background: linear-gradient(180deg, rgba(10, 13, 20, 0.78) 0%, rgba(10, 13, 20, 0.94) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(10, 13, 20, 0.78) 0%, rgba(10, 13, 20, 0.94) 100%), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     text-align: center;
     color: #ffffff;
 }
