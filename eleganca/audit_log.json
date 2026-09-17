@@ -1,7 +1,7 @@
 {
   "project_id": "PRJ-W8-TEST",
-  "start_time": "2026-09-17T15:39:23.592740+00:00",
-  "exported_at": "2026-09-17T15:39:26.515846+00:00",
+  "start_time": "2026-09-17T15:41:35.086066+00:00",
+  "exported_at": "2026-09-17T15:41:47.421457+00:00",
   "tasks_count": 2,
   "tasks": [
     {
@@ -9,12 +9,12 @@
       "project_id": "PRJ-W8-TEST",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Eleganca",
-      "status": "FAILED",
+      "status": "SUCCESS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{\"brief\": {\"client_name\": \"Eleganca\", \"business_type\": \"Frizerski salon\", \"requirements\": [\"Opis storitev\", \"Cenik\", \"Kontaktni obrazec\"], \"contact_email\": \"info@eleganca.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T15:39:23.668976+00:00",
-      "updated_at": "2026-09-17T15:39:23.690407+00:00"
+      "created_at": "2026-09-17T15:41:35.186945+00:00",
+      "updated_at": "2026-09-17T15:41:35.223419+00:00"
     },
     {
       "task_id": "TASK-QA-PRJ-W8-TEST-C1",
@@ -25,50 +25,57 @@
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T15:39:23.705657+00:00",
-      "updated_at": "2026-09-17T15:39:23.722485+00:00"
+      "created_at": "2026-09-17T15:41:35.249291+00:00",
+      "updated_at": "2026-09-17T15:41:35.322902+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-42DA6ECB",
+      "run_id": "RUN-52426353",
       "task_id": "TASK-BUILD-PRJ-W8-TEST",
-      "status": "FAILED",
-      "artifacts_json": "[]",
-      "evidence_json": "[\"Unhandled Exception during agent run: name 'btype_lower' is not defined\"]",
-      "decisions_json": "[\"Execution halted safely due to unhandled exception.\"]",
-      "cost_json": "{\"tokens_used\": 0, \"estimated_usd\": 0.0}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:23.682996+00:00\", \"run_id\": \"RUN-42DA6ECB\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W8-TEST\", \"goal\": \"Build website in sandbox for Eleganca\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:23.683049+00:00\", \"run_id\": \"RUN-42DA6ECB\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"goal\": \"Build website in sandbox for Eleganca\"}}, {\"timestamp\": \"2026-09-17T15:39:23.690237+00:00\", \"run_id\": \"RUN-42DA6ECB\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Eleganca\", \"debate_transcript\": [{\"speaker\": \"MinimalistArtDirector\", \"message\": \"Za Eleganca (Frizerski salon) predlagam: Zagovarjam zra\\u010den, minimalisti\\u010den studio dizajn z visokim kontrastom, odli\\u010dno tipografijo in umirjenimi prefinjenimi linijami.\"}, {\"speaker\": \"ConversionRewardDesigner\", \"message\": \"Strinjam se z barvno zadr\\u017eanostjo. Aesthetic je vrhunski, vendar morava zagotoviti, da obiskovalec takoj za\\u010duti odzivnost strani. Gumbi morajo imeti otipljiv klik (transform scale 0.98), kartice morajo ob lebdenju gladko reagirati, klic k akciji (CTA) pa mora imeti jasen vizualni fokus. Dodajva otipljiv gumb z rahlim vtisom in privla\\u010dne statisti\\u010dne poudarke.\"}, {\"speaker\": \"MinimalistArtDirector\", \"message\": \"Sprejeto! Integrirajva taktilne mikrogibe brez kri\\u010de\\u010dih efektov, tako da ohraniva \\u010dist editorial videz.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"Oblikovalski studio uspe\\u0161no uskladil estetiko in UX za 'Eleganca'. Ocena: 100.0%.\"}}, {\"timestamp\": \"2026-09-17T15:39:23.690363+00:00\", \"run_id\": \"RUN-42DA6ECB\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 1, \"action\": \"EXCEPTION_CAUGHT\", \"details\": {\"error\": \"Unhandled Exception during agent run: name 'btype_lower' is not defined\"}}]",
-      "timestamp": "2026-09-17T15:39:23.690407+00:00"
+      "status": "SUCCESS",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w8-test\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Eleganca\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w8-test\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w8-test\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
+      "evidence_json": "[\"Created index.html (10123 bytes)\", \"Created styles.css (10225 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
+      "decisions_json": "[\"Selected tailored color palette and messaging for Frizerski salon\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
+      "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:41:35.207281+00:00\", \"run_id\": \"RUN-52426353\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W8-TEST\", \"goal\": \"Build website in sandbox for Eleganca\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:41:35.207368+00:00\", \"run_id\": \"RUN-52426353\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"goal\": \"Build website in sandbox for Eleganca\"}}, {\"timestamp\": \"2026-09-17T15:41:35.219735+00:00\", \"run_id\": \"RUN-52426353\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Eleganca\", \"debate_transcript\": [{\"speaker\": \"MinimalistArtDirector\", \"message\": \"Za Eleganca (Frizerski salon) predlagam: Zagovarjam zra\\u010den, minimalisti\\u010den studio dizajn z visokim kontrastom, odli\\u010dno tipografijo in umirjenimi prefinjenimi linijami.\"}, {\"speaker\": \"ConversionRewardDesigner\", \"message\": \"Strinjam se z barvno zadr\\u017eanostjo. Aesthetic je vrhunski, vendar morava zagotoviti, da obiskovalec takoj za\\u010duti odzivnost strani. Gumbi morajo imeti otipljiv klik (transform scale 0.98), kartice morajo ob lebdenju gladko reagirati, klic k akciji (CTA) pa mora imeti jasen vizualni fokus. Dodajva otipljiv gumb z rahlim vtisom in privla\\u010dne statisti\\u010dne poudarke.\"}, {\"speaker\": \"MinimalistArtDirector\", \"message\": \"Sprejeto! Integrirajva taktilne mikrogibe brez kri\\u010de\\u010dih efektov, tako da ohraniva \\u010dist editorial videz.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"Oblikovalski studio uspe\\u0161no uskladil estetiko in UX za 'Eleganca'. Ocena: 100.0%.\"}}, {\"timestamp\": \"2026-09-17T15:41:35.223223+00:00\", \"run_id\": \"RUN-52426353\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T15:41:35.223372+00:00\", \"run_id\": \"RUN-52426353\", \"task_id\": \"TASK-BUILD-PRJ-W8-TEST\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-17T15:41:35.223419+00:00"
     },
     {
-      "run_id": "RUN-6F8993A8",
+      "run_id": "RUN-82590F53",
       "task_id": "TASK-QA-PRJ-W8-TEST-C1",
       "status": "PASS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w8-test\\\\index.html\", \"type\": \"html_verified\"}]",
-      "evidence_json": "[\"VERIFIED: index.html exists (9805 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
+      "evidence_json": "[\"VERIFIED: index.html exists (10123 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:23.719400+00:00\", \"run_id\": \"RUN-6F8993A8\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W8-TEST\", \"goal\": \"Run deterministic QA checks for Eleganca\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:23.719488+00:00\", \"run_id\": \"RUN-6F8993A8\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"project_id\": \"PRJ-W8-TEST\"}}, {\"timestamp\": \"2026-09-17T15:39:23.722349+00:00\", \"run_id\": \"RUN-6F8993A8\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:39:23.722452+00:00\", \"run_id\": \"RUN-6F8993A8\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T15:39:23.722485+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:41:35.269779+00:00\", \"run_id\": \"RUN-82590F53\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W8-TEST\", \"goal\": \"Run deterministic QA checks for Eleganca\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:41:35.269867+00:00\", \"run_id\": \"RUN-82590F53\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"project_id\": \"PRJ-W8-TEST\"}}, {\"timestamp\": \"2026-09-17T15:41:35.322734+00:00\", \"run_id\": \"RUN-82590F53\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:41:35.322856+00:00\", \"run_id\": \"RUN-82590F53\", \"task_id\": \"TASK-QA-PRJ-W8-TEST-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T15:41:35.322902+00:00"
     }
   ],
-  "decisions_count": 2,
+  "decisions_count": 3,
   "decisions": [
     {
       "decision_id": 1,
       "project_id": "PRJ-W8-TEST",
-      "run_id": "RUN-42DA6ECB",
-      "decision_text": "Execution halted safely due to unhandled exception.",
-      "timestamp": "2026-09-17T15:39:23.690407+00:00"
+      "run_id": "RUN-52426353",
+      "decision_text": "Selected tailored color palette and messaging for Frizerski salon",
+      "timestamp": "2026-09-17T15:41:35.223419+00:00"
     },
     {
       "decision_id": 2,
       "project_id": "PRJ-W8-TEST",
-      "run_id": "RUN-6F8993A8",
+      "run_id": "RUN-52426353",
+      "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
+      "timestamp": "2026-09-17T15:41:35.223419+00:00"
+    },
+    {
+      "decision_id": 3,
+      "project_id": "PRJ-W8-TEST",
+      "run_id": "RUN-82590F53",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T15:39:23.722485+00:00"
+      "timestamp": "2026-09-17T15:41:35.322902+00:00"
     }
   ],
   "supervisor_audits": {
