@@ -1,87 +1,80 @@
 {
   "project_id": "PRJ-E2E-03",
-  "start_time": "2026-09-17T15:11:09.808400+00:00",
-  "exported_at": "2026-09-17T15:11:10.038984+00:00",
+  "start_time": "2026-09-17T15:39:19.802925+00:00",
+  "exported_at": "2026-09-17T15:39:22.870378+00:00",
   "tasks_count": 2,
   "tasks": [
     {
       "task_id": "TASK-BUILD-PRJ-E2E-03",
       "project_id": "PRJ-E2E-03",
       "assigned_agent": "builder",
-      "goal": "Build website in sandbox for sem Pizzerija Ali Baba",
-      "status": "SUCCESS",
+      "goal": "Build website in sandbox for Pizzerija Ali Baba",
+      "status": "FAILED",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
-      "context_json": "{\"brief\": {\"client_name\": \"sem Pizzerija Ali Baba\", \"business_type\": \"Restavracija\", \"requirements\": [\"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"info@pizzerija-alibaba.si\", \"color_scheme\": \"\"}}",
+      "context_json": "{\"brief\": {\"client_name\": \"Pizzerija Ali Baba\", \"business_type\": \"Restavracija\", \"requirements\": [\"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"info@pizzerija-alibaba.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-17T15:11:09.884002+00:00",
-      "updated_at": "2026-09-17T15:11:09.904060+00:00"
+      "created_at": "2026-09-17T15:39:19.904711+00:00",
+      "updated_at": "2026-09-17T15:39:19.929012+00:00"
     },
     {
       "task_id": "TASK-QA-PRJ-E2E-03-C1",
       "project_id": "PRJ-E2E-03",
       "assigned_agent": "qa",
-      "goal": "Run deterministic QA checks for sem Pizzerija Ali Baba",
+      "goal": "Run deterministic QA checks for Pizzerija Ali Baba",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-17T15:11:09.922265+00:00",
-      "updated_at": "2026-09-17T15:11:09.976073+00:00"
+      "created_at": "2026-09-17T15:39:19.947860+00:00",
+      "updated_at": "2026-09-17T15:39:19.969855+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-08C40EB2",
+      "run_id": "RUN-B385EA18",
       "task_id": "TASK-BUILD-PRJ-E2E-03",
-      "status": "SUCCESS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for sem Pizzerija Ali Baba\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
-      "evidence_json": "[\"Created index.html (9829 bytes)\", \"Created styles.css (8806 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
-      "decisions_json": "[\"Selected tailored color palette and messaging for Restavracija\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
-      "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:11:09.899669+00:00\", \"run_id\": \"RUN-08C40EB2\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Build website in sandbox for sem Pizzerija Ali Baba\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:11:09.899737+00:00\", \"run_id\": \"RUN-08C40EB2\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"goal\": \"Build website in sandbox for sem Pizzerija Ali Baba\"}}, {\"timestamp\": \"2026-09-17T15:11:09.903890+00:00\", \"run_id\": \"RUN-08C40EB2\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-17T15:11:09.904014+00:00\", \"run_id\": \"RUN-08C40EB2\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-17T15:11:09.904060+00:00"
+      "status": "FAILED",
+      "artifacts_json": "[]",
+      "evidence_json": "[\"Unhandled Exception during agent run: name 'btype_lower' is not defined\"]",
+      "decisions_json": "[\"Execution halted safely due to unhandled exception.\"]",
+      "cost_json": "{\"tokens_used\": 0, \"estimated_usd\": 0.0}",
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:19.927118+00:00\", \"run_id\": \"RUN-B385EA18\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali Baba\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:19.927245+00:00\", \"run_id\": \"RUN-B385EA18\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"goal\": \"Build website in sandbox for Pizzerija Ali Baba\"}}, {\"timestamp\": \"2026-09-17T15:39:19.928570+00:00\", \"run_id\": \"RUN-B385EA18\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Pizzerija Ali Baba\", \"debate_transcript\": [{\"speaker\": \"MinimalistArtDirector\", \"message\": \"Za Pizzerija Ali Baba (Restavracija) predlagam: Zagovarjam zra\\u010den, minimalisti\\u010den studio dizajn z visokim kontrastom, odli\\u010dno tipografijo in umirjenimi prefinjenimi linijami.\"}, {\"speaker\": \"ConversionRewardDesigner\", \"message\": \"Strinjam se z barvno zadr\\u017eanostjo. Aesthetic je vrhunski, vendar morava zagotoviti, da obiskovalec takoj za\\u010duti odzivnost strani. Gumbi morajo imeti otipljiv klik (transform scale 0.98), kartice morajo ob lebdenju gladko reagirati, klic k akciji (CTA) pa mora imeti jasen vizualni fokus. Dodajva otipljiv gumb z rahlim vtisom in privla\\u010dne statisti\\u010dne poudarke.\"}, {\"speaker\": \"MinimalistArtDirector\", \"message\": \"Sprejeto! Integrirajva taktilne mikrogibe brez kri\\u010de\\u010dih efektov, tako da ohraniva \\u010dist editorial videz.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"Oblikovalski studio uspe\\u0161no uskladil estetiko in UX za 'Pizzerija Ali Baba'. Ocena: 100.0%.\"}}, {\"timestamp\": \"2026-09-17T15:39:19.928924+00:00\", \"run_id\": \"RUN-B385EA18\", \"task_id\": \"TASK-BUILD-PRJ-E2E-03\", \"step\": 1, \"action\": \"EXCEPTION_CAUGHT\", \"details\": {\"error\": \"Unhandled Exception during agent run: name 'btype_lower' is not defined\"}}]",
+      "timestamp": "2026-09-17T15:39:19.929012+00:00"
     },
     {
-      "run_id": "RUN-588A39D9",
+      "run_id": "RUN-38BD3A6B",
       "task_id": "TASK-QA-PRJ-E2E-03-C1",
       "status": "PASS",
       "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-03\\\\index.html\", \"type\": \"html_verified\"}]",
       "evidence_json": "[\"VERIFIED: index.html exists (9829 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-17T15:11:09.936908+00:00\", \"run_id\": \"RUN-588A39D9\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Run deterministic QA checks for sem Pizzerija Ali Baba\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:11:09.937001+00:00\", \"run_id\": \"RUN-588A39D9\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"project_id\": \"PRJ-E2E-03\"}}, {\"timestamp\": \"2026-09-17T15:11:09.975926+00:00\", \"run_id\": \"RUN-588A39D9\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:11:09.976043+00:00\", \"run_id\": \"RUN-588A39D9\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-17T15:11:09.976073+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-17T15:39:19.965026+00:00\", \"run_id\": \"RUN-38BD3A6B\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-03\", \"goal\": \"Run deterministic QA checks for Pizzerija Ali Baba\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-17T15:39:19.965141+00:00\", \"run_id\": \"RUN-38BD3A6B\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"project_id\": \"PRJ-E2E-03\"}}, {\"timestamp\": \"2026-09-17T15:39:19.969586+00:00\", \"run_id\": \"RUN-38BD3A6B\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-17T15:39:19.969782+00:00\", \"run_id\": \"RUN-38BD3A6B\", \"task_id\": \"TASK-QA-PRJ-E2E-03-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-17T15:39:19.969855+00:00"
     }
   ],
-  "decisions_count": 3,
+  "decisions_count": 2,
   "decisions": [
     {
-      "decision_id": 7,
+      "decision_id": 5,
       "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-08C40EB2",
-      "decision_text": "Selected tailored color palette and messaging for Restavracija",
-      "timestamp": "2026-09-17T15:11:09.904060+00:00"
+      "run_id": "RUN-B385EA18",
+      "decision_text": "Execution halted safely due to unhandled exception.",
+      "timestamp": "2026-09-17T15:39:19.929012+00:00"
     },
     {
-      "decision_id": 8,
+      "decision_id": 6,
       "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-08C40EB2",
-      "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-17T15:11:09.904060+00:00"
-    },
-    {
-      "decision_id": 9,
-      "project_id": "PRJ-E2E-03",
-      "run_id": "RUN-588A39D9",
+      "run_id": "RUN-38BD3A6B",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-17T15:11:09.976073+00:00"
+      "timestamp": "2026-09-17T15:39:19.969855+00:00"
     }
   ],
   "supervisor_audits": {
     "sales_supervisor": {
       "verdict": "APPROVED_FOR_CONSTRUCTION",
-      "supervisor_note": "Sales Supervisor approved brief for sem Pizzerija Ali Baba. Quality score: 100%. Ready for ManagerAgent.",
+      "supervisor_note": "Sales Supervisor approved brief for Pizzerija Ali Baba. Quality score: 100%. Ready for ManagerAgent.",
       "can_proceed_to_manager": true
     },
     "manager_supervisor": {
