@@ -1,81 +1,81 @@
 {
-  "project_id": "PRJ-E2E-02",
-  "start_time": "2026-09-18T14:26:44.887866+00:00",
-  "exported_at": "2026-09-18T14:26:47.074745+00:00",
+  "project_id": "PRJ-W11-02",
+  "start_time": "2026-09-18T14:26:55.687365+00:00",
+  "exported_at": "2026-09-18T14:26:58.001241+00:00",
   "tasks_count": 2,
   "tasks": [
     {
-      "task_id": "TASK-BUILD-PRJ-E2E-02",
-      "project_id": "PRJ-E2E-02",
+      "task_id": "TASK-BUILD-PRJ-W11-02",
+      "project_id": "PRJ-W11-02",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Vodovodne Storitve",
       "status": "SUCCESS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{\"brief\": {\"client_name\": \"Vodovodne Storitve\", \"business_type\": \"Vodovodar\", \"requirements\": [\"Opis storitev\", \"Cenik\", \"Kontaktni obrazec\"], \"contact_email\": \"novak@vodovod.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-18T14:26:44.943753+00:00",
-      "updated_at": "2026-09-18T14:26:44.967835+00:00"
+      "created_at": "2026-09-18T14:26:55.748075+00:00",
+      "updated_at": "2026-09-18T14:26:55.773221+00:00"
     },
     {
-      "task_id": "TASK-QA-PRJ-E2E-02-C1",
-      "project_id": "PRJ-E2E-02",
+      "task_id": "TASK-QA-PRJ-W11-02-C1",
+      "project_id": "PRJ-W11-02",
       "assigned_agent": "qa",
       "goal": "Run deterministic QA checks for Vodovodne Storitve",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-18T14:26:44.980259+00:00",
-      "updated_at": "2026-09-18T14:26:45.004773+00:00"
+      "created_at": "2026-09-18T14:26:55.784274+00:00",
+      "updated_at": "2026-09-18T14:26:55.806303+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-ED430D80",
-      "task_id": "TASK-BUILD-PRJ-E2E-02",
+      "run_id": "RUN-BA9D5A7C",
+      "task_id": "TASK-BUILD-PRJ-W11-02",
       "status": "SUCCESS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-02\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Vodovodne Storitve\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-02\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-02\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-02\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Vodovodne Storitve\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-02\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-02\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
       "evidence_json": "[\"Created index.html (10916 bytes)\", \"Created styles.css (12130 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
       "decisions_json": "[\"Selected tailored color palette and messaging for Vodovodar\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
       "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-18T14:26:44.956267+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:26:44.956299+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve\"}}, {\"timestamp\": \"2026-09-18T14:26:44.966482+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Vodovodne Storitve\", \"archetype\": \"WarmArtisan\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Vodovodne Storitve' v arhetipu WarmArtisan s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Vodovodne Storitve' (Vodovodar). Pregledujem izku\\u0161nje preteklih 381 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Vodovodne Storitve' predlagam strate\\u0161ko pozicioniranje: Mojstrske in\\u0161talacije in obrtni\\u0161ke storitve z dolgoletno garancijo na izvedbo.. Izbran arhetip: WarmArtisan.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Vodovodne Storitve' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:26:44.966526+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Vodovodne Storitve\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Vodovodne Storitve' (Vodovodar). Pregledujem izku\\u0161nje preteklih 381 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Vodovodne Storitve' predlagam strate\\u0161ko pozicioniranje: Mojstrske in\\u0161talacije in obrtni\\u0161ke storitve z dolgoletno garancijo na izvedbo.. Izbran arhetip: WarmArtisan.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Vodovodne Storitve' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:26:44.967766+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-18T14:26:44.967820+00:00\", \"run_id\": \"RUN-ED430D80\", \"task_id\": \"TASK-BUILD-PRJ-E2E-02\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-18T14:26:44.967835+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-18T14:26:55.760165+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:26:55.760199+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"goal\": \"Build website in sandbox for Vodovodne Storitve\"}}, {\"timestamp\": \"2026-09-18T14:26:55.771607+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Vodovodne Storitve\", \"archetype\": \"WarmArtisan\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Vodovodne Storitve' v arhetipu WarmArtisan s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Vodovodne Storitve' (Vodovodar). Pregledujem izku\\u0161nje preteklih 385 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Vodovodne Storitve' predlagam strate\\u0161ko pozicioniranje: Mojstrske in\\u0161talacije in obrtni\\u0161ke storitve z dolgoletno garancijo na izvedbo.. Izbran arhetip: WarmArtisan.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Vodovodne Storitve' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:26:55.771665+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Vodovodne Storitve\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Vodovodne Storitve' (Vodovodar). Pregledujem izku\\u0161nje preteklih 385 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Vodovodne Storitve' predlagam strate\\u0161ko pozicioniranje: Mojstrske in\\u0161talacije in obrtni\\u0161ke storitve z dolgoletno garancijo na izvedbo.. Izbran arhetip: WarmArtisan.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Vodovodne Storitve' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:26:55.773153+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-18T14:26:55.773206+00:00\", \"run_id\": \"RUN-BA9D5A7C\", \"task_id\": \"TASK-BUILD-PRJ-W11-02\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-18T14:26:55.773221+00:00"
     },
     {
-      "run_id": "RUN-DDF90F05",
-      "task_id": "TASK-QA-PRJ-E2E-02-C1",
+      "run_id": "RUN-E8A75EC0",
+      "task_id": "TASK-QA-PRJ-W11-02-C1",
       "status": "PASS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-e2e-02\\\\index.html\", \"type\": \"html_verified\"}]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-02\\\\index.html\", \"type\": \"html_verified\"}]",
       "evidence_json": "[\"VERIFIED: index.html exists (10916 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-18T14:26:44.991251+00:00\", \"run_id\": \"RUN-DDF90F05\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-E2E-02\", \"goal\": \"Run deterministic QA checks for Vodovodne Storitve\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:26:44.991285+00:00\", \"run_id\": \"RUN-DDF90F05\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"project_id\": \"PRJ-E2E-02\"}}, {\"timestamp\": \"2026-09-18T14:26:45.004655+00:00\", \"run_id\": \"RUN-DDF90F05\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-18T14:26:45.004753+00:00\", \"run_id\": \"RUN-DDF90F05\", \"task_id\": \"TASK-QA-PRJ-E2E-02-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-18T14:26:45.004773+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-18T14:26:55.794821+00:00\", \"run_id\": \"RUN-E8A75EC0\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-02\", \"goal\": \"Run deterministic QA checks for Vodovodne Storitve\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:26:55.794853+00:00\", \"run_id\": \"RUN-E8A75EC0\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"project_id\": \"PRJ-W11-02\"}}, {\"timestamp\": \"2026-09-18T14:26:55.806247+00:00\", \"run_id\": \"RUN-E8A75EC0\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-18T14:26:55.806293+00:00\", \"run_id\": \"RUN-E8A75EC0\", \"task_id\": \"TASK-QA-PRJ-W11-02-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-18T14:26:55.806303+00:00"
     }
   ],
   "decisions_count": 3,
   "decisions": [
     {
       "decision_id": 4,
-      "project_id": "PRJ-E2E-02",
-      "run_id": "RUN-ED430D80",
+      "project_id": "PRJ-W11-02",
+      "run_id": "RUN-BA9D5A7C",
       "decision_text": "Selected tailored color palette and messaging for Vodovodar",
-      "timestamp": "2026-09-18T14:26:44.967835+00:00"
+      "timestamp": "2026-09-18T14:26:55.773221+00:00"
     },
     {
       "decision_id": 5,
-      "project_id": "PRJ-E2E-02",
-      "run_id": "RUN-ED430D80",
+      "project_id": "PRJ-W11-02",
+      "run_id": "RUN-BA9D5A7C",
       "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-18T14:26:44.967835+00:00"
+      "timestamp": "2026-09-18T14:26:55.773221+00:00"
     },
     {
       "decision_id": 6,
-      "project_id": "PRJ-E2E-02",
-      "run_id": "RUN-DDF90F05",
+      "project_id": "PRJ-W11-02",
+      "run_id": "RUN-E8A75EC0",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-18T14:26:45.004773+00:00"
+      "timestamp": "2026-09-18T14:26:55.806303+00:00"
     }
   ],
   "supervisor_audits": {
