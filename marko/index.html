@@ -1,370 +1,247 @@
 <!DOCTYPE html>
-<html lang="sl" class="scroll-smooth">
+<html lang="sl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frizerski salon Marko | Vrhunsko oblikovanje las</title>
-    <meta name="description" content="Ekskluziven frizerski salon Marko. Vrhunske frizerske storitve, striženje in nega. Rezervirajte svoj termin danes.">
+    <title>Marko | Frizerski salon</title>
+    <meta name="description" content="Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#0c0c0e] text-[#f4f4f6] font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-[#d4af37] selection:text-black overflow-x-hidden">
+<body>
 
-    <!-- Obvestilni Toast -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-500 ease-out bg-[#141418] border border-[#d4af37]/30 text-white px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-xl flex items-center gap-4 max-w-md">
-        <div class="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></div>
-        <div class="flex-1 text-sm">
-            <span class="font-semibold block text-white">Posebna ponudba</span>
-            <span class="text-zinc-400">Prva rezervacija prinaša 15% popust na vse storitve.</span>
-        </div>
-        <button onclick="document.getElementById('toast').classList.add('translate-y-32', 'opacity-0')" class="text-zinc-400 hover:text-white transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-    </div>
-
-    <!-- Navigacija -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-[#0c0c0e]/80 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="font-['Playfair_Display',serif] text-2xl font-bold tracking-wider text-white flex items-center gap-2">
-                MARKO<span class="text-[#d4af37]">.</span>
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
-                <a href="#storitve" class="hover:text-[#d4af37] transition-colors">Storitve</a>
-                <a href="#cenik" class="hover:text-[#d4af37] transition-colors">Cenik</a>
-                <a href="#mnenja" class="hover:text-[#d4af37] transition-colors">Mnenja</a>
-                <a href="#faq" class="hover:text-[#d4af37] transition-colors">FAQ</a>
+    <!-- Navigacijska vrstica -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">Marko</a>
+            <nav class="nav-links">
+                <a href="#storitve">Storitve</a>
+                <a href="#o-nas">O nas</a>
+                <a href="#mnenja">Mnenja</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontakt" class="btn-nav">Kontakt & Naročila</a>
             </nav>
-
-            <div class="flex items-center gap-4">
-                <button onclick="openModal()" class="hidden sm:inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-[#d4af37] to-[#aa8c2c] text-black font-semibold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-[#d4af37]/20">
-                    Rezerviraj termin
-                </button>
-                <button class="md:hidden text-white p-2" aria-label="Meni">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
         </div>
     </header>
 
     <main>
-        <!-- Asimetričen Hero -->
-        <section class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
-            <div class="absolute inset-0 z-0 opacity-40">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#0c0c0e] via-[#0c0c0e]/80 to-transparent z-10"></div>
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Frizerski salon Marko" class="w-full h-full object-cover">
-            </div>
-
-            <div class="max-w-7xl mx-auto px-6 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-8">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-                        <span class="flex h-2.5 w-2.5 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10b981]"></span>
-                        </span>
-                        <span class="text-xs font-semibold tracking-wider uppercase text-zinc-300">ODPRTO DANES</span>
-                        <span class="text-zinc-600">|</span>
-                        <div class="flex items-center gap-1 text-[#d4af37] text-xs font-bold">
-                            <span>5.0</span>
-                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.690h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.690l1.07-3.292z"/></svg>
-                        </div>
-                    </div>
-
-                    <h1 class="font-['Playfair_Display',serif] text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">
-                        Umetnost striženja, <span class="italic font-normal text-[#d4af37]">ustvarjena za vas</span>.
-                    </h1>
-
-                    <p class="text-lg text-zinc-400 max-w-xl font-light leading-relaxed">
-                        Dobrodošli v svetu vrhunske estetike las. V salonu Marko združujemo strokovno znanje, najnovejše trende in osebni pristop za vaš popoln videz.
-                    </p>
-
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-                        <button onclick="openModal()" class="px-8 py-4 rounded-full bg-[#d4af37] text-black font-semibold hover:bg-[#c29d2e] transition-all transform hover:-translate-y-0.5 shadow-xl shadow-[#d4af37]/20 text-center">
-                            Rezervirajte termin
-                        </button>
-                        <a href="#storitve" class="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-all text-center backdrop-blur-md">
-                            Raziščite storitve
-                        </a>
-                    </div>
+    
+    <!-- Hero Razdelek (Modern Split Hero z vizualno kartico) -->
+    <section class="hero hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-content">
+                <div class="badge-pill">★ Zanesljive rešitve po vaši meri</div>
+                <h1>Marko</h1>
+                <p class="hero-subtext">Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.</p>
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn-primary">Pošljite povpraševanje</a>
+                    <a href="#storitve" class="btn-secondary">Spoznajte naše storitve</a>
                 </div>
-
-                <div class="lg:col-span-5 hidden lg:block">
-                    <div class="relative">
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-[#d4af37]/20 to-transparent rounded-3xl blur-2xl"></div>
-                        <div class="relative bg-[#141418] border border-white/10 p-8 rounded-3xl backdrop-blur-xl space-y-6">
-                            <h3 class="font-['Playfair_Display',serif] text-2xl font-bold">Hitri hiter kontakt</h3>
-                            <div class="space-y-4 text-sm text-zinc-400">
-                                <div class="flex items-center gap-4 pb-4 border-b border-white/5">
-                                    <div class="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">📍</div>
-                                    <div>
-                                        <strong class="text-white block">Lokacija</strong>
-                                        <span>Cankarjeva ulica 12, Ljubljana</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-4 pb-4 border-b border-white/5">
-                                    <div class="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">📞</div>
-                                    <div>
-                                        <strong class="text-white block">Telefon</strong>
-                                        <span>+386 41 123 456</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">✉️</div>
-                                    <div>
-                                        <strong class="text-white block">Elektronska pošta</strong>
-                                        <span>marko@frizerski.si</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Zadovoljstvo strank</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Let izkušenj</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">5.0 ★</span>
+                        <span class="stat-label">Ocena storitev</span>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Bento Grid Ponudba & Cenik -->
-        <section id="storitve" class="py-32 bg-[#0c0c0e] relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <h2 class="font-['Playfair_Display',serif] text-4xl font-bold">Naše storitve in cenik</h2>
-                    <p class="text-zinc-400">Izberite storitev, ki ustreza vašim željam, in se prepustite rokam profesionalcev.</p>
-                    
-                    <!-- Filter zavihki -->
-                    <div class="flex flex-wrap justify-center gap-2 pt-6">
-                        <button onclick="filterBento('vse')" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-[#d4af37] text-black">Vse storitve</button>
-                        <button onclick="filterBento('strizenje')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-white/5 text-zinc-300 hover:bg-white/10">Striženje</button>
-                        <button onclick="filterBento('barvanje')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-white/5 text-zinc-300 hover:bg-white/10">Barvanje</button>
-                        <button onclick="filterBento('nega')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all bg-white/5 text-zinc-300 hover:bg-white/10">Nega in stajling</button>
-                    </div>
-                </div>
-
-                <!-- Bento Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6" id="bento-grid">
-                    <!-- Kartica 1: Velika (Striženje) -->
-                    <div data-category="strizenje" class="bento-item md:col-span-2 lg:col-span-2 bg-[#141418] border border-white/5 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between min-h-[380px]">
-                        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Striženje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-[#141418]/60 to-transparent z-10"></div>
-                        
-                        <div class="relative z-20 flex justify-between items-start">
-                            <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-[#d4af37]">Priljubljeno</span>
-                            <span class="font-['Playfair_Display',serif] text-2xl font-bold text-[#d4af37]">od 35 €</span>
-                        </div>
-
-                        <div class="relative z-20 space-y-2">
-                            <h3 class="font-['Playfair_Display',serif] text-3xl font-bold">Moško in žensko striženje</h3>
-                            <p class="text-zinc-400 text-sm max-w-md font-light">Celostna storitev svetovanja, pranja, vrhunskega striženja in končnega oblikovanja pričeske po vaših merah.</p>
-                        </div>
-                    </div>
-
-                    <!-- Kartica 2: Barvanje -->
-                    <div data-category="barvanje" class="bento-item md:col-span-1 lg:col-span-2 bg-[#141418] border border-white/5 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between min-h-[380px]" id="cenik">
-                        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Barvanje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-[#141418]/60 to-transparent z-10"></div>
-                        
-                        <div class="relative z-20 flex justify-between items-start">
-                            <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-[#d4af37]">Premium</span>
-                            <span class="font-['Playfair_Display',serif] text-2xl font-bold text-[#d4af37]">od 60 €</span>
-                        </div>
-
-                        <div class="relative z-20 space-y-2">
-                            <h3 class="font-['Playfair_Display',serif] text-3xl font-bold">Barvanje in balayage</h3>
-                            <p class="text-zinc-400 text-sm font-light">Uporaba vrhunskih barv za lase, ki negujejo in ohranjajo dolgotrajen sijaj ter edinstvene odtenke.</p>
-                        </div>
-                    </div>
-
-                    <!-- Kartica 3: Nega las -->
-                    <div data-category="nega" class="bento-item md:col-span-1 lg:col-span-2 bg-[#141418] border border-white/5 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between min-h-[380px]">
-                        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Nega" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-[#141418]/60 to-transparent z-10"></div>
-                        
-                        <div class="relative z-20 flex justify-between items-start">
-                            <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-[#d4af37]">Terapija</span>
-                            <span class="font-['Playfair_Display',serif] text-2xl font-bold text-[#d4af37]">od 25 €</span>
-                        </div>
-
-                        <div class="relative z-20 space-y-2">
-                            <h3 class="font-['Playfair_Display',serif] text-3xl font-bold">Globinska nega las</h3>
-                            <p class="text-zinc-400 text-sm font-light">Intenzivne regeneracijske maske in vitaminske terapije za obnovitev poškodovanih las.</p>
-                        </div>
-                    </div>
-
-                    <!-- Kartica 4: Stajling -->
-                    <div data-category="nega" class="bento-item md:col-span-2 lg:col-span-2 bg-[#141418] border border-white/5 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between min-h-[380px]">
-                        <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Stajling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-[#141418]/60 to-transparent z-10"></div>
-                        
-                        <div class="relative z-20 flex justify-between items-start">
-                            <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-[#d4af37]">Dogodki</span>
-                            <span class="font-['Playfair_Display',serif] text-2xl font-bold text-[#d4af37]">od 30 €</span>
-                        </div>
-
-                        <div class="relative z-20 space-y-2">
-                            <h3 class="font-['Playfair_Display',serif] text-3xl font-bold">Poročne in svečane pričeske</h3>
-                            <p class="text-zinc-400 text-sm font-light">Urejanje za vaše posebne trenutke. Poskrbimo, da boste zasijali in se počutili samozavestno.</p>
-                        </div>
+            <div class="hero-visual-col">
+                <div class="hero-visual-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Marko" class="hero-img">
+                    <div class="hero-floating-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Zanesljive rešitve po vaši meri</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Mnenja strank -->
-        <section id="mnenja" class="py-32 bg-[#101014] border-y border-white/5">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
-                    <h2 class="font-['Playfair_Display',serif] text-4xl font-bold">Mnenja naših strank</h2>
-                    <p class="text-zinc-400">Preberite, kaj o naših storitvah pravijo tisti, ki nam že zaupajo.</p>
+    <!-- Storitve -->
+    <section id="storitve" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naše ključne storitve</h2>
+                <p>Pregled rešitev, ki vam pomagajo doseči vrhunske rezultate.</p>
+            </div>
+            <div class="services-grid">
+                
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Strokovno svetovanje</h3>
+                <span class="price-tag">Brezplačno</span>
+            </div>
+            <p>Poglobljena analiza vaših potreb in priprava optimalnega načrta izvedbe.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Izvedba storitev na ključ</h3>
+                <span class="price-tag">Po dogovoru</span>
+            </div>
+            <p>Natančna in zanesljiva izvedba z upoštevanjem najvišjih kakovostnih standardov.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Vzdrževanje & podpora</h3>
+                <span class="price-tag">Po meri</span>
+            </div>
+            <p>Dolgoročna partnerska podpora in hitra odzivnost ob vsakem izzivu.</p>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O nas / Prednosti -->
+    <section id="o-nas" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zakaj izbrati nas?</h2>
+                <p>Naša načela so zanesljivost, transparentnost in visoka strokovnost.</p>
+            </div>
+            <div class="features-grid">
+                
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Vrhunska kakovost</h3>
+            <p>Brez kompromisov pri izbiri materialov, postopkov in končne izvedbe.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Oseben pristop</h3>
+            <p>Vsakemu projektu se posvetimo individualno z jasno komunikacijo.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Hitra odzivnost</h3>
+            <p>Cenimo vaš čas, zato na vaša povpraševanja odgovorimo v najkrajšem času.</p>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mnenja strank -->
+    <section id="mnenja" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mnenja naših naročnikov</h2>
+                <p>Dolgoročno zaupanje in zadovoljstvo naših strank sta naše največje merilo uspeha.</p>
+            </div>
+            <div class="testimonials-grid">
+                
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Izjemno profesionalen odnos in brezhibna izvedba. Vse je potekalo točno tako, kot smo se dogovorili."</p>
+            <strong>- Maja R.</strong>
+        </div>
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Hitri, odzivni in strokovni. Z veseljem jih priporočam naprej!"</p>
+            <strong>- Tomaž S.</strong>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pogosta vprašanja (FAQ) -->
+    <section id="faq" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pogosta vprašanja</h2>
+                <p>Odgovori na ključna vprašanja naših obiskovalcev in strank.</p>
+            </div>
+            <div class="faq-accordion">
+                
+        <div class="faq-card">
+            <button type="button" class="faq-question">
+                <span>Kako poteka sodelovanje?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Začnemo s kratkim uvodnim pogovorom, sledi priprava ponudbe in natančna izvedba po dogovorjenem urniku.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <button type="button" class="faq-question">
+                <span>Kako hitro lahko pričnem s projektom?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Običajno lahko uvodni termin uskladimo v roku nekaj delovnih dni.</p>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt & Rezervacija -->
+    <section id="kontakt" class="section-padding">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Stopite v stik z nami</h2>
+                <p>Pišite nam ali nas pokličite za neobvezujočo informativno ponudbo.</p>
+                
+                <div class="info-block">
+                    <strong>📍 Lokacija & Naslov:</strong>
+                    <p>Slovenija</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-[#141418] border border-white/5 p-8 rounded-3xl flex flex-col justify-between space-y-6">
-                        <div class="flex text-[#d4af37] gap-1">
-                            ★★★★★
-                        </div>
-                        <p class="text-zinc-300 font-light italic">"Najboljši frizerski salon v mestu! Marko ima neverjeten občutek za lase in točno ve, kaj paše mojemu obrazu."</p>
-                        <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                            <div class="w-12 h-12 rounded-full bg-[#d4af37]/20 flex items-center justify-center font-bold text-[#d4af37]">NŠ</div>
-                            <div>
-                                <strong class="block text-white text-sm">Nina Škerlj</strong>
-                                <span class="text-xs text-zinc-500">Redna stranka</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#141418] border border-white/5 p-8 rounded-3xl flex flex-col justify-between space-y-6">
-                        <div class="flex text-[#d4af37] gap-1">
-                            ★★★★★
-                        </div>
-                        <p class="text-zinc-300 font-light italic">"Vrhunska izkušnja od začetka do konca. Profesionalen pristop, prijeten ambient in izjemni rezultati pri barvanju."</p>
-                        <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                            <div class="w-12 h-12 rounded-full bg-[#d4af37]/20 flex items-center justify-center font-bold text-[#d4af37]">MK</div>
-                            <div>
-                                <strong class="block text-white text-sm">Maja Kovač</strong>
-                                <span class="text-xs text-zinc-500">Stranka balayage</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#141418] border border-white/5 p-8 rounded-3xl flex flex-col justify-between space-y-6">
-                        <div class="flex text-[#d4af37] gap-1">
-                            ★★★★★
-                        </div>
-                        <p class="text-zinc-300 font-light italic">"Hitro, zanesljivo in vedno natančno tako, kot se dogovoriva. Toplo priporočam vsakomur, ki ceni kakovost."</p>
-                        <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-                            <div class="w-12 h-12 rounded-full bg-[#d4af37]/20 flex items-center justify-center font-bold text-[#d4af37]">AP</div>
-                            <div>
-                                <strong class="block text-white text-sm">Andrej Petrič</strong>
-                                <span class="text-xs text-zinc-500">Moško striženje</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="info-block">
+                    <strong>🕒 Delovni čas:</strong>
+                    <p>Ponedeljek - Petek: 08:00 - 18:00<br>Sobota: 08:00 - 13:00</p>
+                </div>
+                <div class="info-block">
+                    <strong>✉️ E-pošta:</strong>
+                    <p><a href="mailto:marko@frizerski-marko.si">marko@frizerski-marko.si</a></p>
+                </div>
+                <div class="info-block">
+                    <strong>📞 Telefonska številka:</strong>
+                    <p><a href="tel:+386 (0)40 123 456">+386 (0)40 123 456</a></p>
                 </div>
             </div>
-        </section>
 
-        <!-- FAQ Harmonika -->
-        <section id="faq" class="py-32 bg-[#0c0c0e]">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                    <h2 class="font-['Playfair_Display',serif] text-4xl font-bold">Pogosta vprašanja</h2>
-                    <p class="text-zinc-400">Vse, kar morate vedeti pred obiskom našega salona.</p>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="bg-[#141418] border border-white/5 rounded-2xl overflow-hidden">
-                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 font-semibold text-lg hover:text-[#d4af37] transition-colors">
-                            <span>Kako lahko rezerviram termin?</span>
-                            <span class="transform transition-transform duration-300">↓</span>
-                        </button>
-                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out px-6 text-zinc-400 text-sm font-light">
-                            <div class="pb-6">
-                                Termin lahko preprosto rezervirate preko spletnega obrazca na naši strani s klikom na gumb "Rezervirajte termin" ali pa nas pokličete direktno na telefonsko številko salona.
-                            </div>
-                        </div>
+            <div class="contact-form-wrap">
+                <form id="contact-form">
+                    <h3>Pošljite povpraševanje</h3>
+                    <div class="form-group">
+                        <label for="name">Vaše ime in priimek *</label>
+                        <input type="text" id="name" required placeholder="Janez Novak">
                     </div>
-
-                    <div class="bg-[#141418] border border-white/5 rounded-2xl overflow-hidden">
-                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 font-semibold text-lg hover:text-[#d4af37] transition-colors">
-                            <span>Ali je obvezna predhodna rezervacija?</span>
-                            <span class="transform transition-transform duration-300">↓</span>
-                        </button>
-                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out px-6 text-zinc-400 text-sm font-light">
-                            <div class="pb-6">
-                                Predhodna rezervacija je priporočljiva, saj s tem zagotovimo, da si za vas vzamemo dovolj časa in se vam posvetimo 100-odstotno.
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Vaš e-naslov *</label>
+                        <input type="email" id="email" required placeholder="janez@gmail.com">
                     </div>
-
-                    <div class="bg-[#141418] border border-white/5 rounded-2xl overflow-hidden">
-                        <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center gap-4 font-semibold text-lg hover:text-[#d4af37] transition-colors">
-                            <span>Katere znamke izdelkov uporabljate?</span>
-                            <span class="transform transition-transform duration-300">↓</span>
-                        </button>
-                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-out px-6 text-zinc-400 text-sm font-light">
-                            <div class="pb-6">
-                                V salonu uporabljamo izključno profesionalne in vrhunske kozmetične znamke za lase, ki las ne poškodujejo, temveč jim povrnejo zdrav videz in sijaj.
-                            </div>
-                        </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonska številka</label>
+                        <input type="tel" id="phone" placeholder="+386 (0)40 123 456">
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Vaše sporočilo ali želeni termin *</label>
+                        <textarea id="message" rows="4" required placeholder="Opišite kaj potrebujete..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Oddaj povpraševanje</button>
+                    <p id="form-feedback" class="form-feedback"></p>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <!-- Noga -->
-    <footer class="bg-[#08080a] border-t border-white/5 py-16">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-            <a href="#" class="font-['Playfair_Display',serif] text-2xl font-bold tracking-wider text-white">
-                MARKO<span class="text-[#d4af37]">.</span>
-            </a>
-            
-            <p class="text-sm text-zinc-500 font-light">
-                Oblikovanje in avtomatizacija: Gal Skrinar
-            </p>
-
-            <div class="flex gap-6 text-sm text-zinc-400">
-                <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="hover:text-white transition-colors">Facebook</a>
-                <a href="mailto:marko@frizerski.si" class="hover:text-white transition-colors">E-pošta</a>
-            </div>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Marko. Vse pravice pridržane.</p>
+            <p class="designer-credit">Oblikovanje in avtomatizacija: <strong>Gal Skrinar</strong> (<a href="https://galskrinar.vercel.app" target="_blank">Portfolio</a>)</p>
         </div>
     </footer>
 
-    <!-- Interaktivni Modal za naročilo / rezervacijo -->
-    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-[#141418] border border-white/10 w-full max-w-lg rounded-3xl p-8 relative transform scale-95 transition-all duration-300 shadow-2xl" id="modalContent">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-zinc-400 hover:text-white transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-
-            <h3 class="font-['Playfair_Display',serif] text-3xl font-bold mb-2">Rezervacija termina</h3>
-            <p class="text-zinc-400 text-sm mb-6">Izpolnite podatke in kontaktirali vas bomo za potrditev termina.</p>
-
-            <form onsubmit="handleBooking(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Vaše ime in priimek</label>
-                    <input type="text" required class="w-full bg-[#0c0c0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Elektronska pošta</label>
-                    <input type="email" required class="w-full bg-[#0c0c0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">Izberite storitev</label>
-                    <select class="w-full bg-[#0c0c0e] border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d4af37] transition-colors">
-                        <option>Moško in žensko striženje</option>
-                        <option>Barvanje in balayage</option>
-                        <option>Globinska nega las</option>
-                        <option>Poročne in svečane pričeske</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full py-4
+    <script src="script.js"></script>
+</body>
+</html>
