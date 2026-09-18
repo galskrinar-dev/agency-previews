@@ -1,274 +1,199 @@
 document.addEventListener('DOMContentLoaded', () => {
-    'use strict';
+    // 5. Mobilni meni toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    const MOBILE_BREAKPOINT = 768;
-
-    const createElement = (tag, className = '', innerHTML = '') => {
-        const el = document.createElement(tag);
-        if (className) el.className = className;
-        if (innerHTML) el.innerHTML = innerHTML;
-        return el;
-    };
-
-    const initMobileMenu = () => {
-        const headerContainer = document.querySelector('.header-container');
-        const mainNav = document.querySelector('.main-nav');
-        const headerActions = document.querySelector('.header-actions');
-
-        if (!headerContainer || !mainNav) return;
-
-        const hamburger = createElement('button', 'mobile-toggle', `
-            <span class="sr-only">Odpri meni</span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        `);
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Preklopi navigacijo');
-
-        const navWrapper = createElement('div', 'mobile-nav-wrapper');
-        navWrapper.appendChild(mainNav.cloneNode(true));
-        if (headerActions) {
-            navWrapper.appendChild(headerActions.cloneNode(true));
-        }
-
-        document.body.appendChild(navWrapper);
-        headerContainer.appendChild(hamburger);
-
-        const toggleMenu = (open) => {
-            const isOpen = open !== undefined ? open : !hamburger.classList.contains('active');
-            hamburger.classList.toggle('active', isOpen);
-            navWrapper.classList.toggle('active', isOpen);
-            hamburger.setAttribute('aria-expanded', isOpen.toString());
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        };
-
-        hamburger.addEventListener('click', () => toggleMenu());
-
-        navWrapper.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A' || e.target.closest('button')) {
-                toggleMenu(false);
-            }
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
         });
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > MOBILE_BREAKPOINT) {
-                toggleMenu(false);
-            }
-        });
-    };
-
-    const initCategoryFilter = () => {
-        const filterContainer = document.querySelector('.category-filters') || document.querySelector('[data-filter-container]');
-        const items = document.querySelectorAll('.service-item, [data-category]');
-
-        if (!filterContainer || items.length === 0) return;
-
-        filterContainer.addEventListener('click', (e) => {
-            const btn = e.target.closest('button[data-filter], .filter-btn');
-            if (!btn) return;
-
-            const filterValue = btn.getAttribute('data-filter') || btn.textContent.trim().toLowerCase();
-
-            filterContainer.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            items.forEach(item => {
-                const category = item.getAttribute('data-category');
-                const shouldShow = filterValue === 'all' || filterValue === 'vse' || category === filterValue;
-
-                if (shouldShow) {
-                    item.style.display = '';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 20);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
+        // Zapri meni ob kliku na povezave v njem
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         });
-    };
+    }
 
-    const initModals = () => {
-        const openTriggers = document.querySelectorAll('[data-modal-target]');
-        const modals = document.querySelectorAll('.modal, [id$="-modal"]');
+    // 1. Filtriranje kategorij ponudbe s preklapljanjem aktivnega gumba in gladkim prikazom
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const serviceItems = document.querySelectorAll('.service-item');
 
-        const closeModal = (modal) => {
-            if (!modal) return;
-            modal.classList.remove('active');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        };
+    if (filterButtons.length > 0 && serviceItems.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Odstrani aktiven razred z vseh gumbov in ga dodaj trenutnemu
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-[#d4af37]', 'text-black');
+                    btn.classList.add('bg-[#141418]', 'text-zinc-400');
+                });
+                button.classList.remove('bg-[#141418]', 'text-zinc-400');
+                button.classList.add('active', 'bg-[#d4af37]', 'text-black');
 
-        const openModal = (modalId) => {
-            const modal = document.getElementById(modalId) || document.querySelector(`.${modalId}`) || document.querySelector(`[id="${modalId}"]`);
-            if (!modal) return;
-            modal.classList.add('active');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            
-            const firstInput = modal.querySelector('input, button, textarea');
-            if (firstInput) firstInput.focus();
-        };
+                const filterValue = button.getAttribute('data-filter');
 
-        openTriggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = trigger.getAttribute('data-modal-target');
-                openModal(targetId);
-            });
-        });
-
-        modals.forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal || e.target.closest('[data-modal-close]') || e.target.classList.contains('modal-close')) {
-                    closeModal(modal);
-                }
-            });
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                modals.forEach(modal => closeModal(modal));
-            }
-        });
-
-        const tabContainers = document.querySelectorAll('.modal-tabs, [data-tabs]');
-        tabContainers.forEach(container => {
-            const tabs = container.querySelectorAll('button, [data-tab-target]');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    const targetSelector = tab.getAttribute('data-tab-target') || tab.getAttribute('href');
-                    const modalContent = tab.closest('.modal, body');
+                serviceItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
                     
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    if (targetSelector) {
-                        const targetContents = modalContent.querySelectorAll('.tab-content, [data-tab-content]');
-                        targetContents.forEach(content => {
-                            const isMatch = content.id === targetSelector.replace('#', '') || content.getAttribute('data-tab-content') === targetSelector;
-                            content.style.display = isMatch ? 'block' : 'none';
-                        });
+                    // Gladka tranzicija skrivanja/prikazovanja
+                    item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    
+                    if (filterValue === 'all' || category === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
                     }
                 });
             });
         });
-    };
+    }
 
-    const initToast = () => {
-        const toast = document.getElementById('toast');
-        if (!toast) return;
+    // 2. Modal za naročilo / rezervacijo: odpiranje na klik gumba, zapiranje, preklapljanje zavihkov
+    const modal = document.getElementById('booking-modal') || document.getElementById('modal');
+    const openModalButtons = document.querySelectorAll('.open-modal, [data-modal-target]');
+    const closeModalButtons = document.querySelectorAll('.close-modal, [data-modal-close]');
+    const tabButtons = document.querySelectorAll('.modal-tab');
+    const tabContents = document.querySelectorAll('.modal-tab-content');
 
-        const closeBtn = toast.querySelector('.toast-close');
-        const textSpan = toast.querySelector('.toast-text');
-        let timeoutId;
-
-        const showToast = (message, duration = 4000) => {
-            if (textSpan && message) textSpan.textContent = message;
-            toast.classList.add('active');
-            toast.setAttribute('aria-hidden', 'false');
-
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                hideToast();
-            }, duration);
-        };
-
-        const hideToast = () => {
-            toast.classList.remove('active');
-            toast.setAttribute('aria-hidden', 'true');
-            clearTimeout(timeoutId);
-        };
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', hideToast);
-        }
-
-        window.showAppToast = showToast;
-    };
-
-    const initForms = () => {
-        const forms = document.querySelectorAll('form, .booking-form, .contact-form');
-
-        forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
+    if (modal) {
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
                 e.preventDefault();
-                
-                const submitBtn = form.querySelector('button[type="submit"]');
-                if (submitBtn) {
-                    submitBtn.disabled = true;
-                    submitBtn.dataset.originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'Pošiljanje...';
-                }
-
+                modal.classList.remove('hidden');
                 setTimeout(() => {
-                    if (submitBtn) {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = submitBtn.dataset.originalText || 'Oddaj';
-                    }
-
-                    form.reset();
-
-                    const modal = form.closest('.modal, [id$="-modal"]');
-                    if (modal) {
-                        modal.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-
-                    if (typeof window.showAppToast === 'function') {
-                        window.showAppToast('Uspešno oddano!', 4000);
-                    }
-                }, 800);
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                }, 10);
             });
         });
-    };
 
-    const initAccordion = () => {
-        const accordions = document.querySelectorAll('.faq-item, .accordion-item, [data-accordion]');
+        const closeModalFunc = () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        };
 
-        accordions.forEach(item => {
-            const trigger = item.querySelector('.faq-question, .accordion-trigger, h3, header');
-            const content = item.querySelector('.faq-answer, .accordion-content');
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', closeModalFunc);
+        });
 
-            if (!trigger || !content) return;
+        // Zapri ob kliku izven modalnega okna
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModalFunc();
+            }
+        });
 
-            if (!content.style.maxHeight) {
-                content.style.maxHeight = '0px';
-                content.style.overflow = 'hidden';
-                content.style.transition = 'max-height 0.3s ease, padding 0.3s ease';
+        // Zapri ob tipki Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModalFunc();
+            }
+        });
+    }
+
+    // Preklapljanje zavihkov v modalu
+    if (tabButtons.length > 0 && tabContents.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+
+                tabButtons.forEach(btn => btn.classList.remove('active', 'border-[#d4af37]', 'text-white'));
+                button.classList.add('active', 'border-[#d4af37]', 'text-white');
+
+                tabContents.forEach(content => {
+                    if (content.getAttribute('id') === targetTab) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
+
+    // 3. Oddaja obrazca: ob submitu prikaže Toast obvestilo 'Uspešno oddano!' za 4 sekunde
+    const forms = document.querySelectorAll('form');
+    let toastTimeout;
+
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Ustvari ali poišči obstoječi toast za obvestila
+            let toast = document.getElementById('dynamic-toast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'dynamic-toast';
+                toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-500 ease-out bg-[#141418] border border-[#d4af37]/30 text-white px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-xl flex items-center gap-4 max-w-md';
+                toast.innerHTML = `
+                    <div class="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></div>
+                    <div class="flex-1 text-sm">
+                        <span class="font-semibold block text-white">Uspešno oddano!</span>
+                        <span class="text-zinc-400">Vaša zahteva je bila uspešno poslana. Kmalu vas kontaktiramo.</span>
+                    </div>
+                `;
+                document.body.appendChild(toast);
             }
 
-            trigger.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
+            // Prikaži toast
+            clearTimeout(toastTimeout);
+            toast.classList.remove('translate-y-32', 'opacity-0');
 
-                accordions.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        const otherContent = otherItem.querySelector('.faq-answer, .accordion-content');
-                        if (otherContent) otherContent.style.maxHeight = '0px';
-                    }
-                });
+            // Skrij po 4 sekundah
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
 
-                item.classList.toggle('active', !isActive);
-                if (!isActive) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
+            // Počisti obrazec in zapri modal, če obstaja
+            form.reset();
+            if (modal && !modal.classList.contains('hidden')) {
+                setTimeout(() => {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    setTimeout(() => modal.classList.add('hidden'), 300);
+                }, 1000);
+            }
+        });
+    });
+
+    // 4. FAQ harmonika: klik na vprašanje razpre odgovor
+    const faqItems = document.querySelectorAll('.faq-item, .faq-question');
+
+    faqItems.forEach(item => {
+        const questionBtn = item.classList.contains('faq-question') ? item : item.querySelector('.faq-question');
+        const answer = item.classList.contains('faq-item') ? item.querySelector('.faq-answer') : item.nextElementSibling;
+        const icon = questionBtn ? questionBtn.querySelector('svg, span') : null;
+
+        if (questionBtn && answer) {
+            questionBtn.addEventListener('click', () => {
+                const isOpen = !answer.classList.contains('hidden');
+
+                // Zapri vse ostale FAQ elemente (opcijsko, za lepši UX harmonike)
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+                document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+                if (!isOpen) {
+                    answer.classList.remove('hidden');
+                    questionBtn.setAttribute('aria-expanded', 'true');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
                 } else {
-                    content.style.maxHeight = '0px';
+                    answer.classList.add('hidden');
+                    questionBtn.setAttribute('aria-expanded', 'false');
+                    if (icon) icon.style.transform = 'rotate(0deg)';
                 }
             });
-        });
-    };
-
-    initMobileMenu();
-    initCategoryFilter();
-    initModals();
-    initToast();
-    initForms();
-    initAccordion();
+        }
+    });
 });
