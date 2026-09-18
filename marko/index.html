@@ -1,344 +1,246 @@
 <!DOCTYPE html>
-<html lang="sl" class="scroll-smooth">
+<html lang="sl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marko | Premium Vodovodne Storitve in Hitra Intervencija</title>
-    <meta name="description" content="Zanesljiv vodovodar Marko nudi strokovne vodovodne inštalacije, adaptacije kopalnic in nujna popravila. Odprto danes!">
+    <title>Marko | Frizerski salon</title>
+    <meta name="description" content="Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#0b0f19] text-[#f3f4f6] font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden">
+<body>
 
-    <!-- Toast Obvestilo -->
-    <aside aria-label="Obvestila" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none">
-        <div id="toast" role="status" aria-live="polite" class="pointer-events-auto flex items-center gap-4 bg-[#111827]/90 backdrop-blur-xl border border-white/10 px-5 py-4 rounded-2xl shadow-2xl shadow-cyan-500/10 transform translate-y-24 opacity-0 transition-all duration-500">
-            <span class="flex h-3 w-3 relative">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-            </span>
-            <div>
-                <p class="text-xs font-semibold text-white">Nujna intervencija? Na voljo!</p>
-                <p class="text-xs text-gray-400">Marko je trenutno na terenu in sprejema klice.</p>
-            </div>
-            <button onclick="document.getElementById('toast').classList.add('translate-y-24', 'opacity-0')" class="text-gray-400 hover:text-white ml-2 text-sm" aria-label="Zapri obvestilo">&times;</button>
-        </div>
-    </aside>
-
-    <!-- Navigacija -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-[#0b0f19]/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-black font-extrabold text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-                    M
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold text-lg tracking-tight text-white">Vodovod Marko</span>
-                    <span class="text-[10px] text-cyan-400 font-medium tracking-widest uppercase">Master Plumber</span>
-                </div>
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                <a href="#storitve" class="hover:text-cyan-400 transition-colors">Storitve</a>
-                <a href="#cenik" class="hover:text-cyan-400 transition-colors">Cenik</a>
-                <a href="#mnenja" class="hover:text-cyan-400 transition-colors">Mnenja</a>
-                <a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a>
+    <!-- Navigacijska vrstica -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">Marko</a>
+            <nav class="nav-links">
+                <a href="#storitve">Storitve</a>
+                <a href="#o-nas">O nas</a>
+                <a href="#mnenja">Mnenja</a>
+                <a href="#faq">FAQ</a>
+                <a href="#kontakt" class="btn-nav">Kontakt & Naročila</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <a href="tel:041123456" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2.5 rounded-xl transition-all">
-                    <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                    041 123 456
-                </a>
-                <button onclick="openModal()" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-cyan-500/20 hover:brightness-110 active:scale-95 transition-all">
-                    Rezerviraj termin
-                </button>
-            </div>
         </div>
     </header>
 
     <main>
-        <!-- Asimetričen Hero -->
-        <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 flex flex-col items-start z-10">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            ODPRTO DANES
-                        </div>
-                        <div class="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300">
-                            <span class="text-amber-400">★</span> 5.0 Ocena strank
-                        </div>
-                    </div>
-                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-                        Vrhunske vodovodne rešitve <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">brez kompromisov.</span>
-                    </h1>
-                    <p class="text-lg text-gray-400 max-w-xl mb-8 font-normal leading-relaxed">
-                        Pozdravljeni, sem Marko. Zanesljiv vodovodar s 15+ leti izkušenj za nujne intervencije, popravila pip, wc-jev ter celovite prenove kopalnic. Hitro, čisto in z garancijo.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-                        <button onclick="openModal()" class="bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-cyan-500/20 text-center transition-all">
-                            Naroči vodovodarja
-                        </button>
-                        <a href="#storitve" class="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-4 rounded-2xl text-center transition-all">
-                            Razišči storitve
-                        </a>
-                    </div>
+    
+    <!-- Hero Razdelek (Modern Split Hero z vizualno kartico) -->
+    <section class="hero hero-split">
+        <div class="container hero-split-grid">
+            <div class="hero-content">
+                <div class="badge-pill">★ Zanesljive rešitve po vaši meri</div>
+                <h1>Marko</h1>
+                <p class="hero-subtext">Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.</p>
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn-primary">Pošljite povpraševanje</a>
+                    <a href="#storitve" class="btn-secondary">Spoznajte naše storitve</a>
                 </div>
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl opacity-30 blur-2xl"></div>
-                        <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-[#111827] shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80" alt="Vodovodar Marko na delu" class="w-full h-[480px] object-cover hover:scale-105 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-transparent to-transparent opacity-80"></div>
-                            <div class="absolute bottom-6 left-6 right-6 bg-[#111827]/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center justify-between">
-                                <div>
-                                    <p class="text-sm font-bold text-white">Hitri odziv na terenu</p>
-                                    <p class="text-xs text-gray-400">Prihod v 60 minutah za nujne primere</p>
-                                </div>
-                                <span class="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1.5 rounded-xl">24/7</span>
-                            </div>
-                        </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Zadovoljstvo strank</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Let izkušenj</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">5.0 ★</span>
+                        <span class="stat-label">Ocena storitev</span>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Bento Grid Ponudba & Cenik -->
-        <section id="storitve" class="py-24 relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                    <div>
-                        <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-3 block">Storitve in Cenik</span>
-                        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Kaj lahko storim za vas?</h2>
-                    </div>
-                    <!-- Filtrirni zavihki -->
-                    <div class="flex flex-wrap gap-2 bg-[#111827] p-1.5 rounded-2xl border border-white/5" role="tablist">
-                        <button onclick="filterBento('vse')" role="tab" aria-selected="true" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-black transition-all">Vse</button>
-                        <button onclick="filterBento('nujno')" role="tab" aria-selected="false" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-white transition-all">Intervencije</button>
-                        <button onclick="filterBento('instalacije')" role="tab" aria-selected="false" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold text-gray-400 hover:text-white transition-all">Inštalacije</button>
-                    </div>
-                </div>
-
-                <!-- Bento Grid -->
-                <div id="cenik" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Kartica 1: Velika -->
-                    <div data-category="nujno" class="bento-card md:col-span-2 bg-[#111827] border border-white/10 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-cyan-500/50 transition-all">
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/10 transition-colors"></div>
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold px-3 py-1.5 rounded-xl">Nujna intervencija</span>
-                                <span class="text-2xl font-extrabold text-white">od 50 € <span class="text-xs text-gray-400 font-normal">/h</span></span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Hitra odprava okvar in izlitij</h3>
-                            <p class="text-gray-400 text-sm mb-6">Poškodovane cevi, zamašeni odtosi, puščanje bojlerjev in druge nevšečnosti, ki zahtevajo takojšen odziv.</p>
-                        </div>
-                        <button onclick="openModal()" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm group-hover:translate-x-1 transition-transform">
-                            Rezerviraj termin <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </button>
-                    </div>
-
-                    <!-- Kartica 2 -->
-                    <div data-category="instalacije" class="bento-card md:col-span-1 lg:col-span-2 bg-[#111827] border border-white/10 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-cyan-500/50 transition-all">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold px-3 py-1.5 rounded-xl">Adaptacija</span>
-                                <span class="text-2xl font-extrabold text-white">Po dogovoru</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Prenova kopalnic na ključ</h3>
-                            <p class="text-gray-400 text-sm mb-6">Celovita prenova kopalniških prostorov od rušenja do montaže sanitarne keramike in pip.</p>
-                        </div>
-                        <button onclick="openModal()" class="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm group-hover:translate-x-1 transition-transform">
-                            Pridobi ponudbo <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </button>
-                    </div>
-
-                    <!-- Kartica 3 -->
-                    <div data-category="instalacije" class="bento-card md:col-span-1 bg-[#111827] border border-white/10 rounded-3xl p-8 flex flex-col justify-between group hover:border-cyan-500/50 transition-all">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3.5 py-1.5 rounded-xl">Sanitarna oprema</span>
-                                <span class="text-xl font-extrabold text-white">od 40 €</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Montaža pip in wc-jev</h3>
-                            <p class="text-gray-400 text-sm">Strokovna namestitev vseh vrst armatur, umivalnikov in WC školjk.</p>
-                        </div>
-                        <button onclick="openModal()" class="mt-6 text-xs font-bold text-cyan-400">Naroči zdaj →</button>
-                    </div>
-
-                    <!-- Kartica 4 -->
-                    <div data-category="nujno" class="bento-card md:col-span-1 bg-[#111827] border border-white/10 rounded-3xl p-8 flex flex-col justify-between group hover:border-cyan-500/50 transition-all">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-bold px-3.5 py-1.5 rounded-xl">Odmaševanje</span>
-                                <span class="text-xl font-extrabold text-white">od 60 €</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Strojno odmaševanje odtokov</h3>
-                            <p class="text-gray-400 text-sm">Hitro in učinkovito čiščenje cevi z napredno opremo brez uničevanja inventarja.</p>
-                        </div>
-                        <button onclick="openModal()" class="mt-6 text-xs font-bold text-cyan-400">Naroči zdaj →</button>
-                    </div>
-
-                    <!-- Kartica 5 -->
-                    <div data-category="instalacije" class="bento-card md:col-span-2 lg:col-span-2 bg-[#111827] border border-white/10 rounded-3xl p-8 flex flex-col justify-between group hover:border-cyan-500/50 transition-all">
-                        <div>
-                            <div class="flex justify-between items-start mb-6">
-                                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold px-3.5 py-1.5 rounded-xl">Bojlerji</span>
-                                <span class="text-xl font-extrabold text-white">od 70 €</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Servis in menjava grelnikov vode</h3>
-                            <p class="text-gray-400 text-sm">Redno vzdrževanje, čiščenje vodnega kamna in menjava dotrajanih bojlerjev vseh znamk.</p>
-                        </div>
-                        <button onclick="openModal()" class="mt-6 text-xs font-bold text-cyan-400">Rezerviraj servis →</button>
+            <div class="hero-visual-col">
+                <div class="hero-visual-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Marko" class="hero-img">
+                    <div class="hero-floating-pill">
+                        <span class="pulse-dot"></span>
+                        <span>Zanesljive rešitve po vaši meri</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Mnenja strank -->
-        <section id="mnenja" class="py-24 bg-[#0d1322] border-y border-white/5 relative">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-3 block">Mnenja strank</span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Kaj pravijo tisti, ki so mi zaupali?</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Mnenje 1 -->
-                    <div class="bg-[#111827] border border-white/10 p-8 rounded-3xl flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 mb-4 text-sm">★★★★★</div>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6">"Marko nam je rešil poplavljeno kopalnico v nedeljo zvečer. Hitro odziven, izjemno profesionalen in poštena cena. Priporočam vsakomur!"</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center text-sm">T</div>
-                            <div>
-                                <p class="text-sm font-bold text-white">Tine Novak</p>
-                                <p class="text-xs text-gray-400">Ljubljana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mnenje 2 -->
-                    <div class="bg-[#111827] border border-white/10 p-8 rounded-3xl flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 mb-4 text-sm">★★★★★</div>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6">"Popolna prenova kopalnice izvedena točno v dogovorjenem roku. Čisto delovišče in odlični nasveti glede izbire armature."</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center text-sm">M</div>
-                            <div>
-                                <p class="text-sm font-bold text-white">Maja Zupan</p>
-                                <p class="text-xs text-gray-400">Domžale</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mnenje 3 -->
-                    <div class="bg-[#111827] border border-white/10 p-8 rounded-3xl flex flex-col justify-between">
-                        <div>
-                            <div class="flex text-amber-400 mb-4 text-sm">★★★★★</div>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6">"Hitra menjava počene cevi v steni. Marko je mojster stare šole, ki obvlada sodobno tehnologijo. Kapo dol!"</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center text-sm">B</div>
-                            <div>
-                                <p class="text-sm font-bold text-white">Boštjan Kovač</p>
-                                <p class="text-xs text-gray-400">Kranj</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Storitve -->
+    <section id="storitve" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Naše ključne storitve</h2>
+                <p>Pregled rešitev, ki vam pomagajo doseči vrhunske rezultate.</p>
             </div>
-        </section>
+            <div class="services-grid">
+                
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Strokovno svetovanje</h3>
+                <span class="price-tag">Brezplačno</span>
+            </div>
+            <p>Poglobljena analiza vaših potreb in priprava optimalnega načrta izvedbe.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Izvedba storitev na ključ</h3>
+                <span class="price-tag">Po dogovoru</span>
+            </div>
+            <p>Natančna in zanesljiva izvedba z upoštevanjem najvišjih kakovostnih standardov.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Vzdrževanje & podpora</h3>
+                <span class="price-tag">Po meri</span>
+            </div>
+            <p>Dolgoročna partnerska podpora in hitra odzivnost ob vsakem izzivu.</p>
+        </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- FAQ Harmonika -->
-        <section id="faq" class="py-24 max-w-4xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-3 block">Pogosta vprašanja</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Vse, kar morate vedeti</h2>
+    <!-- O nas / Prednosti -->
+    <section id="o-nas" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zakaj izbrati nas?</h2>
+                <p>Naša načela so zanesljivost, transparentnost in visoka strokovnost.</p>
             </div>
-            <div class="space-y-4">
-                <details class="group bg-[#111827] border border-white/10 rounded-2xl overflow-hidden transition-all">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-white text-lg">
-                        Kakšen je odzivni čas za nujne intervencije?
-                        <span class="transform group-open:rotate-180 transition-transform text-cyan-400 font-bold text-xl">↓</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                        Za nujne primere (izlitja, počene cevi) sem na voljo 24/7. Na vašem naslovu sem običajno v roku 30 do 60 minut, odvisno od vaše lokacije in trenutne zasedenosti.
-                    </div>
-                </details>
-                <details class="group bg-[#111827] border border-white/10 rounded-2xl overflow-hidden transition-all">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-white text-lg">
-                        Ali nudite garancijo na opravljeno delo?
-                        <span class="transform group-open:rotate-180 transition-transform text-cyan-400 font-bold text-xl">↓</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                        Seveda. Na vse izvedene inštalacije in popravila nudim polno garancijo. Vgrajujem izključno preverjene materiale priznanih proizvajalcev.
-                    </div>
-                </details>
-                <details class="group bg-[#111827] border border-white/10 rounded-2xl overflow-hidden transition-all">
-                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-white text-lg">
-                        Kako poteka obračun storitev?
-                        <span class="transform group-open:rotate-180 transition-transform text-cyan-400 font-bold text-xl">↓</span>
-                    </summary>
-                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
-                        Pred začetkom vsakega dela vam podam oceno stroškov. Pri večjih projektih (adaptacije) pripravim pisni predračun. Ni skritih stroškov!
-                    </div>
-                </details>
+            <div class="features-grid">
+                
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Vrhunska kakovost</h3>
+            <p>Brez kompromisov pri izbiri materialov, postopkov in končne izvedbe.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Oseben pristop</h3>
+            <p>Vsakemu projektu se posvetimo individualno z jasno komunikacijo.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Hitra odzivnost</h3>
+            <p>Cenimo vaš čas, zato na vaša povpraševanja odgovorimo v najkrajšem času.</p>
+        </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <!-- Mnenja strank -->
+    <section id="mnenja" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mnenja naših naročnikov</h2>
+                <p>Dolgoročno zaupanje in zadovoljstvo naših strank sta naše največje merilo uspeha.</p>
+            </div>
+            <div class="testimonials-grid">
+                
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Izjemno profesionalen odnos in brezhibna izvedba. Vse je potekalo točno tako, kot smo se dogovorili."</p>
+            <strong>- Maja R.</strong>
+        </div>
+        <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Hitri, odzivni in strokovni. Z veseljem jih priporočam naprej!"</p>
+            <strong>- Tomaž S.</strong>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pogosta vprašanja (FAQ) -->
+    <section id="faq" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pogosta vprašanja</h2>
+                <p>Odgovori na ključna vprašanja naših obiskovalcev in strank.</p>
+            </div>
+            <div class="faq-accordion">
+                
+        <div class="faq-card">
+            <button type="button" class="faq-question">
+                <span>Kako poteka sodelovanje?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Začnemo s kratkim uvodnim pogovorom, sledi priprava ponudbe in natančna izvedba po dogovorjenem urniku.</p>
+            </div>
+        </div>
+        <div class="faq-card">
+            <button type="button" class="faq-question">
+                <span>Kako hitro lahko pričnem s projektom?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Običajno lahko uvodni termin uskladimo v roku nekaj delovnih dni.</p>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt & Rezervacija -->
+    <section id="kontakt" class="section-padding">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Stopite v stik z nami</h2>
+                <p>Pišite nam ali nas pokličite za neobvezujočo informativno ponudbo.</p>
+                
+                <div class="info-block">
+                    <strong>📍 Lokacija & Naslov:</strong>
+                    <p>Slovenija</p>
+                </div>
+                <div class="info-block">
+                    <strong>🕒 Delovni čas:</strong>
+                    <p>Ponedeljek - Petek: 08:00 - 18:00<br>Sobota: 08:00 - 13:00</p>
+                </div>
+                <div class="info-block">
+                    <strong>✉️ E-pošta:</strong>
+                    <p><a href="mailto:marko@frizerski-marko.si">marko@frizerski-marko.si</a></p>
+                </div>
+                <div class="info-block">
+                    <strong>📞 Telefonska številka:</strong>
+                    <p><a href="tel:+386 (0)40 123 456">+386 (0)40 123 456</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form id="contact-form">
+                    <h3>Pošljite povpraševanje</h3>
+                    <div class="form-group">
+                        <label for="name">Vaše ime in priimek *</label>
+                        <input type="text" id="name" required placeholder="Janez Novak">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Vaš e-naslov *</label>
+                        <input type="email" id="email" required placeholder="janez@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonska številka</label>
+                        <input type="tel" id="phone" placeholder="+386 (0)40 123 456">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Vaše sporočilo ali želeni termin *</label>
+                        <textarea id="message" rows="4" required placeholder="Opišite kaj potrebujete..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Oddaj povpraševanje</button>
+                    <p id="form-feedback" class="form-feedback"></p>
+                </form>
+            </div>
+        </div>
+    </section>
     </main>
 
     <!-- Noga -->
-    <footer class="bg-[#070a12] border-t border-white/5 py-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-black font-extrabold text-sm">
-                    M
-                </div>
-                <span class="font-bold text-white">Vodovod Marko s.p.</span>
-            </div>
-            <p class="text-xs text-gray-500">
-                Oblikovanje in avtomatizacija: Gal Skrinar
-            </p>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Marko. Vse pravice pridržane.</p>
+            <p class="designer-credit">Oblikovanje in avtomatizacija: <strong>Gal Skrinar</strong> (<a href="https://galskrinar.vercel.app" target="_blank">Portfolio</a>)</p>
         </div>
     </footer>
-
-    <!-- Interaktivni Modal za naročilo / rezervacijo -->
-    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-[#111827] border border-white/10 w-full max-w-lg rounded-3xl p-8 relative shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl font-bold" aria-label="Zapri">&times;</button>
-            <h3 class="text-2xl font-extrabold text-white mb-2">Rezervacija termina</h3>
-            <p class="text-gray-400 text-sm mb-6">Izpolnite obrazec in Marko vas bo kontaktiral v najkrajšem možnem času.</p>
-            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-2">Vaše ime in priimek</label>
-                    <input type="text" required class="w-full bg-[#0b0f19] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Janez Novak">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-2">Telefonska številka</label>
-                    <input type="tel" required class="w-full bg-[#0b0f19] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors" placeholder="041 ...">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-2">Vrsta storitve</label>
-                    <select class="w-full bg-[#0b0f19] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors">
-                        <option>Nujna intervencija</option>
-                        <option>Montaža pipe / WC</option>
-                        <option>Adaptacija kopalnice</option>
-                        <option>Servis bojlerja</option>
-                        <option>Drugo</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-2">Opis težave</label>
-                    <textarea rows="3" class="w-full bg-[#0b0f19] border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Kratek opis..."></textarea>
-                </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-extrabold py-3.5 rounded-xl shadow-lg shadow-cyan-500/20 hover:brightness-110 transition-all">
-                    Pošlji povpraševanje
-                </button>
-            </form>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
