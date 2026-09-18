@@ -1,81 +1,81 @@
 {
-  "project_id": "PRJ-W11-01",
-  "start_time": "2026-09-18T14:02:45.504915+00:00",
-  "exported_at": "2026-09-18T14:02:48.093517+00:00",
+  "project_id": "PROJ-TEST-SUP-1",
+  "start_time": "2026-09-18T14:03:07.236356+00:00",
+  "exported_at": "2026-09-18T14:03:11.867554+00:00",
   "tasks_count": 2,
   "tasks": [
     {
-      "task_id": "TASK-BUILD-PRJ-W11-01",
-      "project_id": "PRJ-W11-01",
+      "task_id": "TASK-BUILD-PROJ-TEST-SUP-1",
+      "project_id": "PROJ-TEST-SUP-1",
       "assigned_agent": "builder",
       "goal": "Build website in sandbox for Marko",
       "status": "SUCCESS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
-      "context_json": "{\"brief\": {\"client_name\": \"Marko\", \"business_type\": \"Frizerski salon\", \"requirements\": [\"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"mail@marko.si\", \"color_scheme\": \"\"}}",
+      "context_json": "{\"brief\": {\"client_name\": \"Marko\", \"business_type\": \"Frizerski salon\", \"requirements\": [\"Cenik\", \"Opis storitev\", \"Kontaktni obrazec\"], \"contact_email\": \"marko@frizerski.si\", \"color_scheme\": \"\"}}",
       "acceptance_criteria_json": "[\"Create index.html, styles.css, script.js in sandbox\", \"Ensure form validation included\", \"Pass all QA deterministic checks\"]",
-      "created_at": "2026-09-18T14:02:45.582389+00:00",
-      "updated_at": "2026-09-18T14:02:45.622231+00:00"
+      "created_at": "2026-09-18T14:03:07.295287+00:00",
+      "updated_at": "2026-09-18T14:03:07.323846+00:00"
     },
     {
-      "task_id": "TASK-QA-PRJ-W11-01-C1",
-      "project_id": "PRJ-W11-01",
+      "task_id": "TASK-QA-PROJ-TEST-SUP-1-C1",
+      "project_id": "PROJ-TEST-SUP-1",
       "assigned_agent": "qa",
       "goal": "Run deterministic QA checks for Marko",
       "status": "PASS",
       "budget_json": "{\"max_steps\": 10, \"max_tokens\": 20000}",
       "context_json": "{}",
       "acceptance_criteria_json": "[\"Zero defects reported\"]",
-      "created_at": "2026-09-18T14:02:45.634776+00:00",
-      "updated_at": "2026-09-18T14:02:45.665480+00:00"
+      "created_at": "2026-09-18T14:03:07.336783+00:00",
+      "updated_at": "2026-09-18T14:03:07.363231+00:00"
     }
   ],
   "runs_count": 2,
   "runs": [
     {
-      "run_id": "RUN-5CD4BE36",
-      "task_id": "TASK-BUILD-PRJ-W11-01",
+      "run_id": "RUN-842F21D5",
+      "task_id": "TASK-BUILD-PROJ-TEST-SUP-1",
       "status": "SUCCESS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-01\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Marko\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-01\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-01\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
-      "evidence_json": "[\"Created index.html (10851 bytes)\", \"Created styles.css (12130 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\index.html\", \"type\": \"html\", \"summary\": \"Custom High-End responsive HTML for Marko\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\styles.css\", \"type\": \"css\", \"summary\": \"Custom theme responsive CSS system\"}, {\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\script.js\", \"type\": \"js\", \"summary\": \"Interactive client handling\"}]",
+      "evidence_json": "[\"Created index.html (10861 bytes)\", \"Created styles.css (12130 bytes)\", \"Created script.js (842 bytes)\", \"Verified semantic structure: Header, Hero, Services Grid, Why Choose Us, Testimonials, Opening Hours, Contact Form, Footer\", \"Verified mobile responsive viewport and accessible form elements\"]",
       "decisions_json": "[\"Selected tailored color palette and messaging for Frizerski salon\", \"Generated multi-section high-converting layout with custom pricing and review components\"]",
       "cost_json": "{\"tokens_used\": 1800, \"estimated_usd\": 0.0036}",
-      "logs_json": "[{\"timestamp\": \"2026-09-18T14:02:45.595650+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-01\", \"goal\": \"Build website in sandbox for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:02:45.595692+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"goal\": \"Build website in sandbox for Marko\"}}, {\"timestamp\": \"2026-09-18T14:02:45.619356+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"archetype\": \"CleanMinimalistStudio\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Marko' v arhetipu CleanMinimalistStudio s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Marko' (Frizerski salon). Pregledujem izku\\u0161nje preteklih 353 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Marko' predlagam strate\\u0161ko pozicioniranje: Strokovne re\\u0161itve po meri naro\\u010dnika z jamstvom visoke kakovosti za Marko.. Izbran arhetip: CleanMinimalistStudio.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Marko' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:02:45.619407+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Marko' (Frizerski salon). Pregledujem izku\\u0161nje preteklih 353 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Marko' predlagam strate\\u0161ko pozicioniranje: Strokovne re\\u0161itve po meri naro\\u010dnika z jamstvom visoke kakovosti za Marko.. Izbran arhetip: CleanMinimalistStudio.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Marko' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:02:45.622157+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-18T14:02:45.622215+00:00\", \"run_id\": \"RUN-5CD4BE36\", \"task_id\": \"TASK-BUILD-PRJ-W11-01\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
-      "timestamp": "2026-09-18T14:02:45.622231+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-18T14:03:07.306706+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-SUP-1\", \"goal\": \"Build website in sandbox for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:03:07.306740+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 1, \"action\": \"BUILDER_TASK_RECEIVED\", \"details\": {\"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"goal\": \"Build website in sandbox for Marko\"}}, {\"timestamp\": \"2026-09-18T14:03:07.322485+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 1, \"action\": \"SWARM_GOVERNANCE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"archetype\": \"CleanMinimalistStudio\", \"governor_decree\": \"Mandat vlada potrjuje: unikatna spletna stran za 'Marko' v arhetipu CleanMinimalistStudio s hero fotografijo in visoko-odzivno taktilno kodo.\", \"transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Marko' (Frizerski salon). Pregledujem izku\\u0161nje preteklih 359 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Marko' predlagam strate\\u0161ko pozicioniranje: Strokovne re\\u0161itve po meri naro\\u010dnika z jamstvom visoke kakovosti za Marko.. Izbran arhetip: CleanMinimalistStudio.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"inspector_notes\": \"\\u2713 Ime podjetja 'Marko' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:03:07.322526+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 1, \"action\": \"DESIGN_STUDIO_DEBATE_APPROVED\", \"details\": {\"client_name\": \"Marko\", \"debate_transcript\": [{\"speaker\": \"SwarmGovernor\", \"message\": \"Razgla\\u0161am zasedanje vlade za projekt 'Marko' (Frizerski salon). Pregledujem izku\\u0161nje preteklih 359 projektov.\"}, {\"speaker\": \"StrategyMinister\", \"message\": \"Za 'Marko' predlagam strate\\u0161ko pozicioniranje: Strokovne re\\u0161itve po meri naro\\u010dnika z jamstvom visoke kakovosti za Marko.. Izbran arhetip: CleanMinimalistStudio.\"}, {\"speaker\": \"ImageGeneratorAgent\", \"message\": \"Generiral in kuriral sem vizualni paket (Tailored High-Res Niche Photography): hero slika https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80.\"}, {\"speaker\": \"ArtDirectionMinister\", \"message\": \"Pripravil sem sistem 'Minimalist Slate & Sapphire' s hero fotografijo, postavitvijo SplitHero in tipografijo 'Plus Jakarta Sans', system-ui, sans-serif.\"}, {\"speaker\": \"SwarmInspector\", \"message\": \"Ocena kakovosti in skladnosti: 100.0/100. Razsodba: SWARM_APPROVED.\"}], \"quality_score\": 100.0, \"supervisor_notes\": \"\\u2713 Ime podjetja 'Marko' je pravilno verificirano kot samostojna blagovna znamka. \\u2713 Visokolo\\u010dljivostna hero fotografija z ustreznim estetskim prekrivanjem potrjena. \\u2713 Taktilni mikrogibi (:active scale(0.97)) in odzivni prehodi potrjeni po na\\u010delih @dopamine-skill.\"}}, {\"timestamp\": \"2026-09-18T14:03:07.323787+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 2, \"action\": \"BUILDER_COMPLETED\", \"details\": {\"artifacts_count\": 3, \"evidence_count\": 5}}, {\"timestamp\": \"2026-09-18T14:03:07.323833+00:00\", \"run_id\": \"RUN-842F21D5\", \"task_id\": \"TASK-BUILD-PROJ-TEST-SUP-1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"SUCCESS\", \"cost\": {\"tokens_used\": 1800, \"estimated_usd\": 0.0036}}}]",
+      "timestamp": "2026-09-18T14:03:07.323846+00:00"
     },
     {
-      "run_id": "RUN-1E59DD75",
-      "task_id": "TASK-QA-PRJ-W11-01-C1",
+      "run_id": "RUN-3D89114D",
+      "task_id": "TASK-QA-PROJ-TEST-SUP-1-C1",
       "status": "PASS",
-      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\prj-w11-01\\\\index.html\", \"type\": \"html_verified\"}]",
-      "evidence_json": "[\"VERIFIED: index.html exists (10851 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
+      "artifacts_json": "[{\"path\": \"C:\\\\Users\\\\uporabnik\\\\Downloads\\\\SP AVTOMATIZACIJA\\\\agency-os\\\\sandbox\\\\proj-test-sup-1\\\\index.html\", \"type\": \"html_verified\"}]",
+      "evidence_json": "[\"VERIFIED: index.html exists (10861 bytes).\", \"VERIFIED: Linked stylesheet 'styles.css' exists.\", \"VERIFIED: Linked script 'script.js' exists.\", \"VERIFIED: <meta name=\\\"viewport\\\"> tag present.\", \"VERIFIED: <header> section present.\", \"VERIFIED: <main> section present.\", \"VERIFIED: Contact <form> present.\", \"VERIFIED: Submit button present.\"]",
       "decisions_json": "[\"QA passed all 5 deterministic checks with 0 defects.\"]",
       "cost_json": "{\"tokens_used\": 800, \"estimated_usd\": 0.0016}",
-      "logs_json": "[{\"timestamp\": \"2026-09-18T14:02:45.649094+00:00\", \"run_id\": \"RUN-1E59DD75\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PRJ-W11-01\", \"goal\": \"Run deterministic QA checks for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:02:45.649131+00:00\", \"run_id\": \"RUN-1E59DD75\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"project_id\": \"PRJ-W11-01\"}}, {\"timestamp\": \"2026-09-18T14:02:45.665406+00:00\", \"run_id\": \"RUN-1E59DD75\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-18T14:02:45.665465+00:00\", \"run_id\": \"RUN-1E59DD75\", \"task_id\": \"TASK-QA-PRJ-W11-01-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
-      "timestamp": "2026-09-18T14:02:45.665480+00:00"
+      "logs_json": "[{\"timestamp\": \"2026-09-18T14:03:07.348791+00:00\", \"run_id\": \"RUN-3D89114D\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 0, \"action\": \"RUN_STARTED\", \"details\": {\"project_id\": \"PROJ-TEST-SUP-1\", \"goal\": \"Run deterministic QA checks for Marko\", \"budget\": {\"max_steps\": 10, \"max_tokens\": 20000}}}, {\"timestamp\": \"2026-09-18T14:03:07.348830+00:00\", \"run_id\": \"RUN-3D89114D\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 1, \"action\": \"QA_VERIFICATION_STARTED\", \"details\": {\"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"project_id\": \"PROJ-TEST-SUP-1\"}}, {\"timestamp\": \"2026-09-18T14:03:07.363165+00:00\", \"run_id\": \"RUN-3D89114D\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 2, \"action\": \"QA_PASSED\", \"details\": {\"evidence_count\": 8}}, {\"timestamp\": \"2026-09-18T14:03:07.363218+00:00\", \"run_id\": \"RUN-3D89114D\", \"task_id\": \"TASK-QA-PROJ-TEST-SUP-1-C1\", \"step\": 2, \"action\": \"RUN_COMPLETED\", \"details\": {\"status\": \"PASS\", \"cost\": {\"tokens_used\": 800, \"estimated_usd\": 0.0016}}}]",
+      "timestamp": "2026-09-18T14:03:07.363231+00:00"
     }
   ],
   "decisions_count": 3,
   "decisions": [
     {
       "decision_id": 1,
-      "project_id": "PRJ-W11-01",
-      "run_id": "RUN-5CD4BE36",
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-842F21D5",
       "decision_text": "Selected tailored color palette and messaging for Frizerski salon",
-      "timestamp": "2026-09-18T14:02:45.622231+00:00"
+      "timestamp": "2026-09-18T14:03:07.323846+00:00"
     },
     {
       "decision_id": 2,
-      "project_id": "PRJ-W11-01",
-      "run_id": "RUN-5CD4BE36",
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-842F21D5",
       "decision_text": "Generated multi-section high-converting layout with custom pricing and review components",
-      "timestamp": "2026-09-18T14:02:45.622231+00:00"
+      "timestamp": "2026-09-18T14:03:07.323846+00:00"
     },
     {
       "decision_id": 3,
-      "project_id": "PRJ-W11-01",
-      "run_id": "RUN-1E59DD75",
+      "project_id": "PROJ-TEST-SUP-1",
+      "run_id": "RUN-3D89114D",
       "decision_text": "QA passed all 5 deterministic checks with 0 defects.",
-      "timestamp": "2026-09-18T14:02:45.665480+00:00"
+      "timestamp": "2026-09-18T14:03:07.363231+00:00"
     }
   ],
   "supervisor_audits": {
