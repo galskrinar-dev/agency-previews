@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marko – Obrtna kavarna in ročna pekarna piškotov</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Obvestilni Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <span class="toast-icon">✨</span>
+        <div class="toast-content">
+            <strong>Dobrodošli v novi pekarni!</strong>
+            <p>Ob prvem obisku vam podarjamo dišečo kavo ob nakupu piškotov.</p>
+        </div>
+        <button class="toast-close" aria-label="Zapri obvestilo">&times;</button>
+    </div>
+
+    <!-- Navigacija -->
+    <header class="site-header">
+        <nav class="nav-container" aria-label="Glavna navigacija">
+            <a href="#" class="logo">
+                <span class="logo-mark">M</span>
+                <span class="logo-text">Marko <em>Kavarna & Pekarna</em></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#ponudba">Ponudba</a></li>
+                <li><a href="#o-nas">O nas</a></li>
+                <li><a href="#mnenja">Mnenja</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn btn-secondary" data-modal-target="booking-modal">Rezerviraj mizo</button>
+                <button class="btn btn-primary" data-modal-target="booking-modal">Naroči piškote</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Asimetričen Hero -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <div class="badge status-badge">
+                            <span class="status-dot"></span>
+                            ODPRTO DANES
+                        </div>
+                        <div class="badge rating-badge">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">5.0 (Strani strank)</span>
+                        </div>
+                    </div>
+                    <h1>Umetnost ročne peke in vrhunska obrtna kava</h1>
+                    <p class="hero-lead">Dobrodošli v kotičku, kjer diši po sveže pečenih babičinih piškotih, zamesenih z ljubeznijo, in skrbno izbranih zrnih kave. Doživite pristen okus domačnosti.</p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary btn-large" data-modal-target="booking-modal">Razišči cenik in naroči</button>
+                        <a href="#ponudba" class="btn btn-text">Poglej ponudbo ↓</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Sveže pecivo in kava v kavarni Marko" loading="eager">
+                    </div>
+                    <div class="hero-floating-card">
+                        <span class="card-icon">🍪</span>
+                        <div>
+                            <strong>Danes sveže pečeno</strong>
+                            <p>Čokoladni piškoti s kristalnim sladkorjem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Ponudba z zavihtki -->
+        <section id="ponudba" class="bento-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Naša izbrana ponudba</h2>
+                    <p>Oglejte si naš cenik in opis storitev ter izberite svoje najljubše pregrehe.</p>
+                </div>
+
+                <div class="filter-tabs" role="tablist">
+                    <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">Vse dobrote</button>
+                    <button class="tab-btn" data-filter="piskoti" role="tab" aria-selected="false">Ročni piškoti</button>
+                    <button class="tab-btn" data-filter="kavarna" role="tab" aria-selected="false">Kavarna & Napitki</button>
+                    <button class="tab-btn" data-filter="slascice" role="tab" aria-selected="false">Dnevne slaščice</button>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Item 1 -->
+                    <article class="bento-card bento-large" data-category="piskoti">
+                        <div class="bento-img">
+                            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="Domači piškoti" loading="lazy">
+                        </div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Bestseller</span>
+                            <h3>Klasični masleni piškoti</h3>
+                            <p>Pripravljeni po tradicionalnem receptu z uporabo pravega masla in vaniljevih strokov.</p>
+                            <div class="bento-footer">
+                                <span class="price">4.50 € / 250g</span>
+                                <button class="btn-icon" data-modal-target="booking-modal" aria-label="Naroči">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 2 -->
+                    <article class="bento-card" data-category="kavarna">
+                        <div class="bento-img">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Obrtna kava" loading="lazy">
+                        </div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Specialty kava</span>
+                            <h3>Obrtni Espresso & Cappuccino</h3>
+                            <p>Skrbno pražena zrna z bogato noto čokolade in lešnika.</p>
+                            <div class="bento-footer">
+                                <span class="price">2.20 €</span>
+                                <button class="btn-icon" data-modal-target="booking-modal" aria-label="Naroči">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 3 -->
+                    <article class="bento-card" data-category="piskoti">
+                        <div class="bento-img">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80" alt="Čokoladni piškoti" loading="lazy">
+                        </div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Temna čokolada</span>
+                            <h3>Double Choco Piškoti</h3>
+                            <p>Intenzivni čokoladni piškoti s koščki belgijske čokolade.</p>
+                            <div class="bento-footer">
+                                <span class="price">5.00 € / 250g</span>
+                                <button class="btn-icon" data-modal-target="booking-modal" aria-label="Naroči">+</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 4 -->
+                    <article class="bento-card bento-wide" data-category="slascice">
+                        <div class="bento-img">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Dnevne slaščice" loading="lazy">
+                        </div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Dnevna svežina</span>
+                            <h3>Ročno izdelane torte in pite</h3>
+                            <p>Vsak dan pripravljamo unikatne sladice po navdihu sezone. Preverite današnjo ponudbo v vitrini ali oddajte naročilo za praznovanja.</p>
+                            <div class="bento-footer">
+                                <span class="price">od 3.80 € / kos</span>
+                                <button class="btn btn-secondary" data-modal-target="booking-modal">Rezerviraj kos</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mnenja strank -->
+        <section id="mnenja" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kaj pravijo naše stranke</h2>
+                    <p>Iskrene izkušnje tistih, ki že uživajo v naših dobrotah.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <blockquote class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>&ldquo;Markovi piškoti me popeljejo naravnost v otroštvo. Vonj, ki se širi iz kavarne, je neustavljiv, kava pa preprosto božanska!&rdquo;</p>
+                        <footer>
+                            <cite>Ana K.</cite>
+                            <span>Zvesta obiskovalka</span>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>&ldquo;Končno prava obrtna pekarna v mestu! Osebje je izjemno prijazno, ambient pa topel in domač. Priporočam vsakomur.&rdquo;</p>
+                        <footer>
+                            <cite>Gregor M.</cite>
+                            <span>Ljubitelj kave</span>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>&ldquo;Naročila sem piškote za rojstnodnevno zabavo in vsi gostje so bili navdušeni. Vrhunska kvaliteta in čudovita embalaža.&rdquo;</p>
+                        <footer>
+                            <cite>Tina Z.</cite>
+                            <span>Organizatorica dogodkov</span>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Harmonika -->
+        <section id="faq" class="faq-section">
+            <div class="container container-narrow">
+                <div class="section-header">
+                    <h2>Pogosto zastavljena vprašanja</h2>
+                    <p>Vse, kar morate vedeti o našem delu, sestavinah in naročilih.</p>
+                </div>
+                <div class="accordion">
+                    <details class="accordion-item">
+                        <summary class="accordion-header">Ali so vsi piškoti pečeni ročno?</summary>
+                        <div class="accordion-body">
+                            <p>Seveda! Vsak posamezen piškot je zamesen, oblikovan in pečen z roko, z uporabo skrbno izbranih lokalnih in naravnih sestavin brez umetnih aditivov.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">Ali je možno naročilo piškotov za darila ali poroke?</summary>
+                        <div class="accordion-body">
+                            <p>Tako je. Ponujamo unikatna darilna pakiranja za rojstne dneve, obletnice in poročne zahvale. Za več informacij nas kontaktirajte preko obrazca.</p>
+                        </div>
+                    </details>
+                    <details class="accordion-item">
+                        <summary class="accordion-header">Kje se nahajate in kakšen je delovni čas?</summary>
+                        <div class="accordion-body">
+                            <p>Nahajamo se v središču mesta, odprti pa smo vsak dan od 7:00 do 20:00. Vabljeni na vonj sveže peke!</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Noga -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-mark">M</span>
+                    <span class="logo-text">Marko <em>Kavarna & Pekarna</em></span>
+                </a>
+                <p>Obrtna kavarna in ročna pekarna piškotov za sladke trenutke vašega dneva.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Hitre povezave</h4>
+                <ul>
+                    <li><a href="#ponudba">Cenik in ponudba</a></li>
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#mnenja">Mnenja</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Obiščite nas</h4>
+                <p>Glavna cesta 12, 1000 Ljubljana</p>
+                <p>Odprto vsak dan: 07:00 – 20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container signature-container">
+                <p>&copy; 2026 Marko Kavarna & Pekarna. Vse pravice pridržane.</p>
+                <p class="signature">Oblikovanje in avtomatizacija: Gal Skrinar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interaktivni Modal -->
+    <div id="booking-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-container">
+            <button class="modal-close" data-modal-close aria-label="Zapri modal">&times;</button>
+            <div class="modal-header">
+                <span class="badge">Hitro naročilo ali rezervacija</span>
+                <h3 id="modal-title">Stopite v stik z Markom</h3>
+                <p>Izpolnite obrazec in z veseljem vam bomo pripravili mizo ali svež paket piškotov.</p>
+            </div>
+            <form class="modal-form" id="order-form">
+                <div class="form-group">
+                    <label for="name">Ime in priimek</label>
+                    <input type="text" id="name" name="name" required placeholder="npr. Ana Novak">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-poštni naslov</label>
+                    <input type="email" id="email" name="email" required placeholder="npr. ana@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="service">Namen povpraševanja</label>
+                    <select id="service" name="service">
+                        <option value="piskoti">Naročilo piškotov (domači prevzem)</option>
+                        <option value="miza">Rezervacija mize v kavarni</option>
+                        <option value="dogodek">Catering / Posebno naročilo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Sporočilo ali želje</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Napišite nam kateri piškoti so vam najljubši ali ob kateri uri želite mizo..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Pošlji povpraševanje</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
