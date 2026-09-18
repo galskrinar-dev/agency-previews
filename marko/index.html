@@ -3,244 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marko | Frizerski salon</title>
-    <meta name="description" content="Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.">
+    <title>Marko | Vrhunski Frizerski Salon</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="toast" class="toast" role="status" aria-live="polite">
+        <span class="toast-dot"></span>
+        <span class="toast-text">Dobrodošli v salonu Marko. Rezervirajte svoj termin še danes!</span>
+        <button class="toast-close" aria-label="Zapri obvestilo">&times;</button>
+    </div>
 
-    <!-- Navigacijska vrstica -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="brand-logo">Marko</a>
-            <nav class="nav-links">
-                <a href="#storitve">Storitve</a>
-                <a href="#o-nas">O nas</a>
-                <a href="#mnenja">Mnenja</a>
-                <a href="#faq">FAQ</a>
-                <a href="#kontakt" class="btn-nav">Kontakt & Naročila</a>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-mark">M</span>
+                <span class="logo-text">Marko <em>Frizerski Salon</em></span>
+            </a>
+            <nav class="main-nav" aria-label="Glavna navigacija">
+                <ul class="nav-list">
+                    <li><a href="#storitve">Storitve</a></li>
+                    <li><a href="#cenik">Cenik</a></li>
+                    <li><a href="#mnenja">Mnenja</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
             </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline" data-modal-target="booking-modal">Kontakt</button>
+                <button class="btn btn-primary" data-modal-target="booking-modal">Rezerviraj termin</button>
+            </div>
         </div>
     </header>
 
     <main>
-    
-    <!-- Hero Razdelek (Modern Split Hero z vizualno kartico) -->
-    <section class="hero hero-split">
-        <div class="container hero-split-grid">
-            <div class="hero-content">
-                <div class="badge-pill">★ Zanesljive rešitve po vaši meri</div>
-                <h1>Marko</h1>
-                <p class="hero-subtext">Povezujemo strokovno znanje, sodoben pristop in brezhibno izvedbo, prilagojeno vašim ciljem.</p>
-                <div class="hero-actions">
-                    <a href="#kontakt" class="btn-primary">Pošljite povpraševanje</a>
-                    <a href="#storitve" class="btn-secondary">Spoznajte naše storitve</a>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-num">100%</span>
-                        <span class="stat-label">Zadovoljstvo strank</span>
+        <section class="hero-asymmetric">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-meta">
+                        <span class="badge badge-open">
+                            <span class="pulse-dot"></span> ODPRTO DANES
+                        </span>
+                        <div class="hero-rating" aria-label="Ocena 5 od 5 zvezdic">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text"><strong>5.0</strong> (180+ mnenj)</span>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-num">10+</span>
-                        <span class="stat-label">Let izkušenj</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">5.0 ★</span>
-                        <span class="stat-label">Ocena storitev</span>
+                    <h1 class="hero-title">Umetnost striženja, prilagojena vašemu <em>slogu</em>.</h1>
+                    <p class="hero-subtitle">Doživite vrhunsko nego las, sodobne trende in popolno sprostitev v ekskluzivnem ambientu salona Marko.</p>
+                    <div class="hero-cta-group">
+                        <button class="btn btn-primary btn-lg" data-modal-target="booking-modal">Rezervirajte zdaj</button>
+                        <a href="#storitve" class="btn btn-text">Raziščite storitve &darr;</a>
                     </div>
                 </div>
-            </div>
-            <div class="hero-visual-col">
-                <div class="hero-visual-card">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Marko" class="hero-img">
-                    <div class="hero-floating-pill">
-                        <span class="pulse-dot"></span>
-                        <span>Zanesljive rešitve po vaši meri</span>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Notranjost modernega frizerskega salona Marko" loading="lazy">
+                        <div class="hero-floating-card">
+                            <span class="card-icon">✂️</span>
+                            <div>
+                                <strong>Vrhunski stilisti</strong>
+                                <p>Individualni pristop k vsaki stranki</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Storitve -->
-    <section id="storitve" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Naše ključne storitve</h2>
-                <p>Pregled rešitev, ki vam pomagajo doseči vrhunske rezultate.</p>
-            </div>
-            <div class="services-grid">
-                
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Strokovno svetovanje</h3>
-                <span class="price-tag">Brezplačno</span>
-            </div>
-            <p>Poglobljena analiza vaših potreb in priprava optimalnega načrta izvedbe.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Izvedba storitev na ključ</h3>
-                <span class="price-tag">Po dogovoru</span>
-            </div>
-            <p>Natančna in zanesljiva izvedba z upoštevanjem najvišjih kakovostnih standardov.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-header">
-                <h3>Vzdrževanje & podpora</h3>
-                <span class="price-tag">Po meri</span>
-            </div>
-            <p>Dolgoročna partnerska podpora in hitra odzivnost ob vsakem izzivu.</p>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- O nas / Prednosti -->
-    <section id="o-nas" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>Zakaj izbrati nas?</h2>
-                <p>Naša načela so zanesljivost, transparentnost in visoka strokovnost.</p>
-            </div>
-            <div class="features-grid">
-                
-        <div class="feature-card">
-            <div class="feature-icon">💎</div>
-            <h3>Vrhunska kakovost</h3>
-            <p>Brez kompromisov pri izbiri materialov, postopkov in končne izvedbe.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🤝</div>
-            <h3>Oseben pristop</h3>
-            <p>Vsakemu projektu se posvetimo individualno z jasno komunikacijo.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>Hitra odzivnost</h3>
-            <p>Cenimo vaš čas, zato na vaša povpraševanja odgovorimo v najkrajšem času.</p>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mnenja strank -->
-    <section id="mnenja" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Mnenja naših naročnikov</h2>
-                <p>Dolgoročno zaupanje in zadovoljstvo naših strank sta naše največje merilo uspeha.</p>
-            </div>
-            <div class="testimonials-grid">
-                
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p>"Izjemno profesionalen odnos in brezhibna izvedba. Vse je potekalo točno tako, kot smo se dogovorili."</p>
-            <strong>- Maja R.</strong>
-        </div>
-        <div class="testi-card">
-            <div class="stars">★★★★★</div>
-            <p>"Hitri, odzivni in strokovni. Z veseljem jih priporočam naprej!"</p>
-            <strong>- Tomaž S.</strong>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pogosta vprašanja (FAQ) -->
-    <section id="faq" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>Pogosta vprašanja</h2>
-                <p>Odgovori na ključna vprašanja naših obiskovalcev in strank.</p>
-            </div>
-            <div class="faq-accordion">
-                
-        <div class="faq-card">
-            <button type="button" class="faq-question">
-                <span>Kako poteka sodelovanje?</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Začnemo s kratkim uvodnim pogovorom, sledi priprava ponudbe in natančna izvedba po dogovorjenem urniku.</p>
-            </div>
-        </div>
-        <div class="faq-card">
-            <button type="button" class="faq-question">
-                <span>Kako hitro lahko pričnem s projektom?</span>
-                <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-                <p>Običajno lahko uvodni termin uskladimo v roku nekaj delovnih dni.</p>
-            </div>
-        </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontakt & Rezervacija -->
-    <section id="kontakt" class="section-padding">
-        <div class="container contact-container">
-            <div class="contact-info">
-                <h2>Stopite v stik z nami</h2>
-                <p>Pišite nam ali nas pokličite za neobvezujočo informativno ponudbo.</p>
-                
-                <div class="info-block">
-                    <strong>📍 Lokacija & Naslov:</strong>
-                    <p>Slovenija</p>
+        <section id="storitve" class="section bento-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Ekskluzivna ponudba</span>
+                    <h2>Storitve & Cenik</h2>
+                    <p>Izberite storitev, ki ustreza vašim željam.</p>
                 </div>
-                <div class="info-block">
-                    <strong>🕒 Delovni čas:</strong>
-                    <p>Ponedeljek - Petek: 08:00 - 18:00<br>Sobota: 08:00 - 13:00</p>
+
+                <div class="filter-tabs" role="tablist" aria-label="Filtriranje storitev">
+                    <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">Vse storitve</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="moako">Moško striženje</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="zenske">Žensko striženje</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="nega">Nega in barvanje</button>
                 </div>
-                <div class="info-block">
-                    <strong>✉️ E-pošta:</strong>
-                    <p><a href="mailto:marko@frizerski.si">marko@frizerski.si</a></p>
-                </div>
-                <div class="info-block">
-                    <strong>📞 Telefonska številka:</strong>
-                    <p><a href="tel:+386 (0)40 123 456">+386 (0)40 123 456</a></p>
+
+                <div class="bento-grid">
+                    <article class="bento-card bento-span-2" data-category="moako zenske">
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Priljubljeno</span>
+                            <h3>Klasično in moderno striženje</h3>
+                            <p>Vključuje svetovanje, pranje las, striženje in profesionalno sušenje ter oblikovanje.</p>
+                            <div class="bento-footer">
+                                <span class="price">od 25 €</span>
+                                <button class="btn btn-sm btn-white" data-modal-target="booking-modal">Izberi</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bento-card" data-category="nega">
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Barvanje</span>
+                            <h3>Balayage & Prameni</h3>
+                            <p>Umetnost naravnih prehodov in sijočih odtenkov z vrhunskimi barvami.</p>
+                            <div class="bento-footer">
+                                <span class="price">od 70 €</span>
+                                <button class="btn btn-sm btn-white" data-modal-target="booking-modal">Izberi</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bento-card" data-category="nega">
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Nega</span>
+                            <h3>Globinska obnova las</h3>
+                            <p>Intenzivna regeneracija poškodovanih las z organičnimi maskami in keratinom.</p>
+                            <div class="bento-footer">
+                                <span class="price">40 €</span>
+                                <button class="btn btn-sm btn-white" data-modal-target="booking-modal">Izberi</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bento-card bento-span-2" data-category="moako">
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="bento-content">
+                            <span class="bento-tag">Grooming</span>
+                            <h3>Striženje brade & brkov</h3>
+                            <p>Natančno urejanje brade z vročo brisačo in negovalnimi olji za popoln moški videz.</p>
+                            <div class="bento-footer">
+                                <span class="price">20 €</span>
+                                <button class="btn btn-sm btn-white" data-modal-target="booking-modal">Izberi</button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <div class="contact-form-wrap">
-                <form id="contact-form">
-                    <h3>Pošljite povpraševanje</h3>
-                    <div class="form-group">
-                        <label for="name">Vaše ime in priimek *</label>
-                        <input type="text" id="name" required placeholder="Janez Novak">
+        <section id="mnenja" class="section testimonials-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Mnenja strank</span>
+                    <h2>Kaj pravijo naše stranke?</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Marko je pravi mojster svojega poklica! Vedno si vzame čas za posvet in rezultat je vsakič presegel pričakovanja. Toplo priporočam!"</p>
+                        <div class="client-info">
+                            <strong>Ana K.</strong>
+                            <span>Redna stranka</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Vaš e-naslov *</label>
-                        <input type="email" id="email" required placeholder="janez@gmail.com">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Najboljši frizerski salon v mestu. Vrhunski ambient, prijazno osebje in izjemna pozornost do detajlov pri urejanju brade."</p>
+                        <div class="client-info">
+                            <strong>Rok P.</strong>
+                            <span>Redna stranka</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Telefonska številka</label>
-                        <input type="tel" id="phone" placeholder="+386 (0)40 123 456">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Končno sem našla frizerja, ki resnično razume, kaj moji lasje potrebujejo. Balayage je naravnost čudovit!"</p>
+                        <div class="client-info">
+                            <strong>Maja Z.</strong>
+                            <span>Redna stranka</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Vaše sporočilo ali želeni termin *</label>
-                        <textarea id="message" rows="4" required placeholder="Opišite kaj potrebujete..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary btn-block">Oddaj povpraševanje</button>
-                    <p id="form-feedback" class="form-feedback"></p>
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="faq" class="section faq-section">
+            <div class="container container-sm">
+                <div class="section-header text-center">
+                    <span class="section-tag">Podpora</span>
+                    <h2>Pogosto zastavljena vprašanja</h2>
+                </div>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">Kako lahko rezerviram termin?</summary>
+                        <div class="faq-answer">
+                            <p>Termin lahko enostavno rezervirate preko spletnega obrazca na naši spletni strani s klikom na gumb "Rezerviraj termin" ali pa nas pokličete direktno.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Ali je obvezen predhodni posvet pred barvanjem?</summary>
+                        <div class="faq-answer">
+                            <p>Za korenite spremembe barve ali prvi obisk priporočamo kratek posvet, da določimo najboljšo tehniko in nego za vaše lase.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Kakšne načine plačila sprejemate?</summary>
+                        <div class="faq-answer">
+                            <p>Sprejemamo gotovino vsa plačilna sredstva (kartice Maestro, Mastercard, Visa) ter mobilno plačevanje.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Noga -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Marko. Vse pravice pridržane.</p>
-            <p class="designer-credit">Oblikovanje in avtomatizacija: <strong>Gal Skrinar</strong> (<a href="https://galskrinar.vercel.app" target="_blank">Portfolio</a>)</p>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-mark">M</span>
+                    <span class="logo-text">Marko <em>Frizerski Salon</em></span>
+                </a>
+                <p>Umetnost in stil za vaše lase.</p>
+                <p class="contact-mail">Kontakt: <a href="mailto:marko@frizerski.si">marko@frizerski.si</a></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Marko Frizerski Salon. Vse pravice pridržane.</p>
+                <p class="signature">Oblikovanje in avtomatizacija: Gal Skrinar</p>
+            </div>
         </div>
     </footer>
+
+    <div id="booking-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-dialog">
+            <button class="modal-close" data-modal-close aria-label="Zapri okno">&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-title">Rezervacija termina / Kontakt</h3>
+                <p>Izpolnite spodnje podatke in kontaktirali vas bomo v najkrajšem možnem času.</p>
+            </div>
+            <form id="contact-form" class="modal-form">
+                <div class="form-group">
+                    <label for="name">Ime in priimek</label>
+                    <input type="text" id="name" name="name" required placeholder="npr. Janez Novak">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-poštni naslov</label>
+                    <input type="email" id="email" name="email" required placeholder="janez@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="service">Izberite storitev</label>
+                    <select id="service" name="service">
+                        <option value="klasicno">Klasično in moderno striženje</option>
+                        <option value="balayage">Balayage & Prameni</option>
+                        <option value="nega">Globinska obnova las</option>
+                        <option value="brada">Striženje brade & brkov</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Sporočilo / želeni termin</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Napišite želeni dan in uro..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Pošlji povpraševanje</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
